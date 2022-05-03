@@ -22,13 +22,32 @@ class LigneCommande extends CustomAbstractService
 
     /**
      * @param array $parameters
-     * @return LigneCommandeEntity
+     * @return LigneCommandeEntity|null
      */
-    public function createEntity(array $parameters):LigneCommandeEntity
+    public function createEntity(array $parameters):?LigneCommandeEntity
     {
         $field = [
             "qte",
         ];
         return $this->createSimpleEntity(LigneCommandeEntity::class,$field,$parameters);
     }
+
+    /**
+     * @param $id
+     * @return LigneCommandeEntity|null
+     */
+    public function findById($id):?LigneCommandeEntity
+    {
+        return $this->em->getRepository(LigneCommandeEntity::class)->find($id);
+    }
+
+    /**
+     * @param array $filter
+     * @return array
+     */
+    public function findFromFilter(array $filter):array
+    {
+        return $this->em->getRepository(LigneCommandeEntity::class)->findBy($filter);
+    }
+
 }
