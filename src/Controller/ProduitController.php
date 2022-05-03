@@ -23,6 +23,7 @@ class ProduitController extends CustomAbstractController
      */
     public function add(Request $request,ProduitService $produitService ): JsonResponse
     {
+        $errorDebug = "";
         $parameters = $this->getParameters($request);
         $waitedParameters = [
             "nom"=> "string","stock"=>"int","prix"=>"float","image"=>"string",
@@ -35,7 +36,8 @@ class ProduitController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "produit" => $produit
-        ] = $produitService->add($parameters);
-        return $this->sendSuccess("Product created Sucess",$produit,response::HTTP_CREATED);
+        ] = $produitService->add($newParameters);
+        dd($error);
+        return $this->sendSuccess("Product created Success",$produit,response::HTTP_CREATED);
     }
 }

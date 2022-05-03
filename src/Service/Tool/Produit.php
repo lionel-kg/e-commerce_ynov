@@ -28,5 +28,23 @@ class Produit extends CustomAbstractService
         return $this->createSimpleEntity(ProduitEntity::class,$field,$produitParameters);
     }
 
+    /**
+     * @param $id
+     * @return ProduitEntity|null
+     */
+    public function findById($id):?ProduitEntity
+    {
+        return $this->em->getRepository(ProduitEntity::class)->find($id);
+    }
+
+    /**
+     * @param array $filter
+     * @return array
+     */
+    public function findFromFilter(array $filter):array
+    {
+        return $this->em->getRepository(ProduitEntity::class)->findBy($filter);
+    }
+
 
 }

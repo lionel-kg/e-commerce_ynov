@@ -21,7 +21,12 @@ class Produit extends ProduitServiceTool
         $this->em = $em;
     }
 
-    public function add(array $parameter):array{
+    /**
+     * @param array $parameter
+     * @return array
+     */
+    public function add(array $parameter):array
+    {
         $errorDebug = "";
         $response = ["error"=>"", "errorDebug"=>"","produit"=>[]];
         try{
