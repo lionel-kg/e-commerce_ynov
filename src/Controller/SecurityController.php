@@ -23,7 +23,6 @@ class SecurityController extends CustomAbstractController
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
-
         return $this->sendSuccess("login");
 
     }
@@ -35,7 +34,6 @@ class SecurityController extends CustomAbstractController
     public function api_login():JsonResponse
     {
         $user = $this->getUser();
-        dd($user);
         return $this->json(array(
             'email' => $user->getUserIdentifier(),
             'roles' => $user->getRoles(),

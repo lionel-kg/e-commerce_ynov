@@ -6,7 +6,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         # used to reload user from session & other features (e.g. switch_user)
-        users:
+        app_user_provider:
             entity:
                 class: App\Entity\User
                 property: email
@@ -20,7 +20,6 @@ security:
             stateless: true
             anonymous: true
             json_login:
-                username_path: email
                 check_path: /api/login_check
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure

@@ -37,8 +37,26 @@ class UserController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "user" => $user,
-        ] = $userService->add($parameters);
+        ] = $userService->add($newParameters);
         dd($user);
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
+    }
+
+    public function edit(Request $request,UserService $userService){
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        $waitedParameters = [
+            "email"=>"string",
+        ];
+        ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
+        if($error !== ""){
+            return $this->sendError($error,$error);
+        }
+        [
+            "error" => $error,
+            "errorDebug"=> $errorDebug,
+            "user"=> $user,
+        ] = $userService->edit($parameters);
+        return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
     }
 }
