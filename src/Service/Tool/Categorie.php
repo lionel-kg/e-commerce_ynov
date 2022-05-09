@@ -6,6 +6,7 @@ use App\Entity\Categorie as CategorieEntity;
 use App\Service\CustomAbstractService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class Categorie extends CustomAbstractService
@@ -16,10 +17,10 @@ class Categorie extends CustomAbstractService
     /**
      * @param EntityManagerInterface $em
      * @param ParameterBagInterface $params
-     * @param EntityManagerInterface $serializer
+     * @param SerializerInterface $serializer
      * @param SluggerInterface $slugger
      */
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         $this->em = $em;
         $this->params = $params;

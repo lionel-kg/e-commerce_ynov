@@ -16,17 +16,23 @@ class Commande extends CommandeTool
     private $em;
     private $params;
 
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         $this->em = $em;
         $this->params = $params;
         parent::__construct($em, $params, $serializer, $slugger);
     }
 
-    public function add(array $parameters,LigneCommandeService $ligneCommandeService,ProduitService $produitService ,CommandeService $commandeService ){
+    public function add(
+        array $parameters,
+        LigneCommandeService $ligneCommandeService,
+        ProduitService $produitService ,
+        CommandeService $commandeService,
+        string $jwt )
+    {
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","commande"=>[]];
-
+        $user = $this->checktJwt($jwt);
         try {
             $commande = $this->createEntity($parameters);
             $panier = $parameters["panier"];

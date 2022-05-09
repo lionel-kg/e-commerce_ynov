@@ -15,7 +15,7 @@ class Produit extends ProduitServiceTool
     private $em;
 
 
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         parent::__construct($em, $params, $serializer, $slugger);
         $this->em = $em;
@@ -23,12 +23,14 @@ class Produit extends ProduitServiceTool
 
     /**
      * @param array $parameter
+     * @param string $jwt
      * @return array
      */
-    public function add(array $parameter):array
+    public function add(array $parameter,string $jwt):array
     {
         $errorDebug = "";
         $response = ["error"=>"", "errorDebug"=>"","produit"=>[]];
+        $user = $this->checktJwt($jwt);
         try{
             $produit = $this->createEntity($parameter);
             $this->em->persist($produit);

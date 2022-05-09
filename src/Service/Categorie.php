@@ -12,7 +12,7 @@ class Categorie extends CategorieTool
     private $em;
     private $params;
 
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         $this->em = $em;
         $this->params = $params;

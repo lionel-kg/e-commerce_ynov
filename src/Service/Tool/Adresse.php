@@ -6,6 +6,7 @@ use App\Entity\Adresse as AdresseEntity;
 use App\Service\CustomAbstractService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class Adresse extends CustomAbstractService
@@ -16,10 +17,10 @@ class Adresse extends CustomAbstractService
     /**
      * @param EntityManagerInterface $em
      * @param ParameterBagInterface $params
-     * @param EntityManagerInterface $serializer
+     * @param SerializerInterface $serializer
      * @param SluggerInterface $slugger
      */
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         $this->em = $em;
         $this->params = $params;
@@ -31,6 +32,7 @@ class Adresse extends CustomAbstractService
         $field = [
             "numero",
             "rue",
+            "codePostal"
         ];
         return $this->createSimpleEntity(AdresseEntity::class,$field,$parameters);
     }

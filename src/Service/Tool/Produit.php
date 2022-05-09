@@ -5,6 +5,7 @@ namespace App\Service\Tool;
 use App\Entity\Produit as ProduitEntity;
 use App\Service\CustomAbstractService;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
@@ -14,7 +15,13 @@ class Produit extends CustomAbstractService
     private $params;
 
 
-    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, EntityManagerInterface $serializer, SluggerInterface $slugger)
+    /**
+     * @param EntityManagerInterface $em
+     * @param ParameterBagInterface $params
+     * @param SerializerInterface $serializer
+     * @param SluggerInterface $slugger
+     */
+    public function __construct(EntityManagerInterface $em, ParameterBagInterface $params, SerializerInterface $serializer, SluggerInterface $slugger)
     {
         $this->em = $em;
         $this->params = $params;
