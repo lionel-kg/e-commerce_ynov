@@ -25,6 +25,7 @@ class ProduitController extends CustomAbstractController
     {
         $errorDebug = "";
         $parameters = $this->getParameters($request);
+        $jwt = $this->getJwt($request);
         $waitedParameters = [
             "nom"=> "string","stock"=>"int","prix"=>"float","image"=>"string",
         ];
@@ -36,8 +37,11 @@ class ProduitController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "produit" => $produit
-        ] = $produitService->add($newParameters);
-        dd($error);
+        ] = $produitService->add($newParameters,$jwt);
+        if ($error !== "") {
+            return $this->sendError($error,$errorDebug);
+        }
+
         return $this->sendSuccess("Product created Success",$produit,response::HTTP_CREATED);
     }
 }

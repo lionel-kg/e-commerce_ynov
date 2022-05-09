@@ -27,7 +27,7 @@ class CategorieController extends CustomAbstractController
             "image"=>"string",
         ];
         ["error" => $error, "parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
-        if($error !== ""){
+        if ($error !== "") {
             return $this->sendError($error,$error);
         }
         [
@@ -35,6 +35,10 @@ class CategorieController extends CustomAbstractController
             "errorDebug"=>$errorDebug,
             "categorie" => $categorie
         ] = $categorieService->add($newParameters);
+        if ($error !== "") {
+            return $this->sendError($error,$errorDebug);
+        }
+
         return $this->sendSuccess("Categorie created success",$categorie,response::HTTP_CREATED);
     }
 }

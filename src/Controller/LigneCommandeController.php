@@ -30,7 +30,7 @@ class LigneCommandeController extends CustomAbstractController
             "qte"=>'int',
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
-        if($error !== ""){
+        if ($error !== "") {
             return $this->sendError($error,$error);
         }
         [
@@ -38,6 +38,9 @@ class LigneCommandeController extends CustomAbstractController
             "errorDebug" => $errorDebug,
             "ligneCommande" => $ligneCommande,
         ] = $ligneCommandeService->add($newParameters,$produitService,$produitId,1);
+        if ($error !== "") {
+            return $this->sendError($error,$errorDebug);
+        }
         return $this->sendSuccess("LigneCommande created success",$ligneCommande,response::HTTP_CREATED);
     }
 }

@@ -30,14 +30,17 @@ class CommandeController extends CustomAbstractController
             "panier"=>"array"
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameter);
-        if($error !== ""){
+        if ($error !== "") {
             return $this->sendError($error,$error);
         }
         [
             "error" => $error,
             "errorDebug" => $errorDebug,
             "commande" => $commande
-         ] = $commandeService->add($newParameters,$ligneCommandeService,$produitService,$commandeService);
-        return $this->sendSuccess("Commande created success");
+         ] = $commandeService->add($newParameters,$ligneCommandeService,$produitService,$commandeService,$jwt);
+        if ($error !== "") {
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("Commande created success",$commande, response::HTTP_CREATED);
     }
 }
