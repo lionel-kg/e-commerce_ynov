@@ -7,15 +7,24 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
+
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\MappedSuperclass
  * @ORM\Table(name="`user`")
+ * @Gedmo\SoftDeleteable(fieldName="deletedAt", hardDelete=false)
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+
+    use TimestampableEntity;
+    use SoftDeleteableEntity;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -41,9 +50,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Adresse::class, inversedBy="users")
+     * @ORM\Column(type="string", length=255)
      */
-    private $adresse;
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pseudo;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dateNaissance;
 
     public function __construct()
     {
@@ -139,27 +163,52 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    /**
-     * @return Collection<int, Adresse>
-     */
-    public function getAdresse(): Collection
+    public function getNom(): ?string
     {
-        return $this->adresse;
+        return $this->nom;
     }
 
-    public function addAdresse(Adresse $adresse): self
+    public function setNom(string $nom): self
     {
-        if (!$this->adresse->contains($adresse)) {
-            $this->adresse[] = $adresse;
-        }
+        $this->nom = $nom;
 
         return $this;
     }
 
-    public function removeAdresse(Adresse $adresse): self
+    public function getPrenom(): ?string
     {
-        $this->adresse->removeElement($adresse);
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getDateNaissance(): ?\DateTimeInterface
+    {
+        return $this->dateNaissance;
+    }
+
+    public function setDateNaissance(\DateTimeInterface $dateNaissance): self
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
 }

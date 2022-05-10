@@ -2,22 +2,21 @@
 
 namespace App\Controller;
 
+use App\Entity\Client as ClientEntity;
 use App\Service\User as UserService;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 
 /**
- * @Route("/user", name="app_user")
+ * @Route("/client", name="app_client")
  */
-class UserController extends CustomAbstractController
+class ClientController extends CustomAbstractController
 {
-
     /**
-     * @Route("/add", methods={"POST"} , name="add_user")
+     * @Route("/add", methods={"POST"} , name="_add")
      * @param Request $request
      * @param UserService $userService
      * @return JsonResponse
@@ -28,6 +27,12 @@ class UserController extends CustomAbstractController
         $parameters = $this->getParameters($request);
         $waitedParameters = [
             "email" => "string",
+            "nom"=>"string",
+            "prenom"=>"string",
+            "pseudo"=> "string",
+            "password"=>"string",
+            "dateNaissance"=>"string",
+
         ];
         ["error" => $error , "parameters" => $newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){
@@ -37,7 +42,7 @@ class UserController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "user" => $user,
-        ] = $userService->add($newParameters);
+        ] = $userService->add($newParameters,ClientEntity::class);
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
     }
 

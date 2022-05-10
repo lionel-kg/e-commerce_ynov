@@ -4,6 +4,7 @@ namespace App\Service\Tool;
 
 use App\Service\CustomAbstractService;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use App\Entity\User as UserEntity;
@@ -29,14 +30,18 @@ class User extends CustomAbstractService
 
     /**
      * @param array $userParameters
+     * @param string $entityClassName
      * @return UserEntity
      */
-    public function createEntity(array $userParameters):UserEntity
+    public function createEntity(array $userParameters,string $entityClassName):?UserEntity
     {
         $field = [
-            "email"
+            "email",
+            "nom",
+            "prenom",
+            "pseudo",
         ];
-        return $this->createSimpleEntity(UserEntity::class,$field,$userParameters);
+        return $this->createSimpleEntity($entityClassName,$field,$userParameters);
     }
 
     /**
