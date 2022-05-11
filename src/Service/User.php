@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Service;
+use App\Entity\Admin as AdminEntity;
 use App\Entity\Client as ClientEntity;
 use \App\Service\Tool\User as UserServiceTool;
 use \App\Entity\User as UserEntity;
@@ -26,6 +27,11 @@ class User extends UserServiceTool
         parent::__construct($em, $params, $serializer, $slugger);
     }
 
+    /**
+     * @param array $parameter
+     * @param string $entityClassName
+     * @return array
+     */
     public function add(
         array $parameter,
         string $entityClassName
@@ -38,6 +44,10 @@ class User extends UserServiceTool
            $user->setPassword($this->passwordHasher->hashPassword($user,$parameter['password']));
            if($user instanceOf ClientEntity){
                $role[] = "ROLE_CLIENT";
+               $user->setRoles($role);
+           }
+           if($user instanceOf AdminEntity){
+               $role[] = "ROLE_ADMIN";
                $user->setRoles($role);
            }
            $dateNaissance = new \DateTime($parameter["dateNaissance"]);
@@ -56,6 +66,10 @@ class User extends UserServiceTool
        return $response;
     }
 
+    /**
+     * @param array $parameter
+     * @return array
+     */
     public function edit(array $parameter){
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","user"=>[]];

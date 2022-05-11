@@ -37,13 +37,18 @@ class Adresse
     private $codePostal;
 
     /**
-     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="adresse")
+     * @ORM\ManyToMany(targetEntity=Client::class, mappedBy="adresse")
      */
-    private $users;
+    private $clients;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
 
     public function __construct()
     {
-        $this->users = new ArrayCollection();
+        $this->clients = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -88,28 +93,40 @@ class Adresse
     }
 
     /**
-     * @return Collection<int, User>
+     * @return Collection<int, Client>
      */
-    public function getUsers(): Collection
+    public function getClients(): Collection
     {
-        return $this->users;
+        return $this->clients;
     }
 
-    public function addUser(User $user): self
+    public function addClient(Client $client): self
     {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->addAdresse($this);
+        if (!$this->clients->contains($client)) {
+            $this->clients[] = $client;
+            $client->addAdresse($this);
         }
 
         return $this;
     }
 
-    public function removeUser(User $user): self
+    public function removeClient(Client $client): self
     {
-        if ($this->users->removeElement($user)) {
-            $user->removeAdresse($this);
+        if ($this->clients->removeElement($client)) {
+            $client->removeAdresse($this);
         }
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
 
         return $this;
     }

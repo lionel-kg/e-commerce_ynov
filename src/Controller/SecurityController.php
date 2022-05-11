@@ -28,10 +28,23 @@ class SecurityController extends CustomAbstractController
     }
 
     /**
-     * @Route("/api/login_check" , name="api_login")
+     * @Route("/api/client/login_check" , name="api_login_client")
      * @return JsonResponse
      */
-    public function api_login():JsonResponse
+    public function api_login_client():JsonResponse
+    {
+        $user = $this->getUser();
+        return $this->json(array(
+            'email' => $user->getUserIdentifier(),
+            'roles' => $user->getRoles(),
+        ));
+    }
+
+    /**
+     * @Route("/api/admin/login_check" , name="api_login_admin")
+     * @return JsonResponse
+     */
+    public function api_login_admin():JsonResponse
     {
         $user = $this->getUser();
         return $this->json(array(

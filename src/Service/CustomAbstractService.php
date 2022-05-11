@@ -2,6 +2,8 @@
 
 namespace App\Service;
 
+use App\Entity\Client as ClientEntity;
+use App\Entity\Admin as AdminEntity;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User as UserEntity;
 use Firebase\JWT\Key;
@@ -34,16 +36,23 @@ Abstract class CustomAbstractService
     /**
      * @param string $jwt
      * @return UserEntity|null
+     * @throws \JsonException
      */
     public function checktJwt(string $jwt):?UserEntity
     {
+        $entityClassName = "";
         $jwtDecode = (array) json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1]))));
         [
             "username" => $email,
             //"token" => $token
         ] =  $jwtDecode;
-        $user = $this->getInfoSerialize([$this->em->getRepository(UserEntity::class)->findOneBy(["email"=>$email])],["user_info"]);
-        return $this->em->getRepository(UserEntity::class)->findOneBy(["email"=>$email]);
+        if($jwtDecode["roles"][0] === "ROLE_CLIENT") {
+            $entityClassName = ClientEntity::class;
+        } elseif ($jwtDecode["roles"][0] === "ROLE_ADMIN") {
+            $entityClassName = AdminEntity::class;
+        }
+        $user = $this->em->getRepository($entityClassName)->findOneBy(["email"=>$email]);
+        return $user;
     }
 
     /**
