@@ -23,21 +23,25 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"produit_info"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"produit_info"})
      */
     private $stock;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"produit_info"})
      */
     private $image;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"produit_info"})
      */
     private $prix;
 
@@ -46,9 +50,20 @@ class Produit
      */
     private $ligneCommandes;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="produits")
+     */
+    private $categorie;
+
+    /**
+     * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="produit")
+     */
+    private $stockTailles;
+
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
+        $this->stockTailles = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -128,6 +143,48 @@ class Produit
             // set the owning side to null (unless already changed)
             if ($ligneCommande->getProduit() === $this) {
                 $ligneCommande->setProduit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, StockTaille>
+     */
+    public function getStockTailles(): Collection
+    {
+        return $this->stockTailles;
+    }
+
+    public function addStockTaille(StockTaille $stockTaille): self
+    {
+        if (!$this->stockTailles->contains($stockTaille)) {
+            $this->stockTailles[] = $stockTaille;
+            $stockTaille->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStockTaille(StockTaille $stockTaille): self
+    {
+        if ($this->stockTailles->removeElement($stockTaille)) {
+            // set the owning side to null (unless already changed)
+            if ($stockTaille->getProduit() === $this) {
+                $stockTaille->setProduit(null);
             }
         }
 

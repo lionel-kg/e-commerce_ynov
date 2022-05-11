@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\CustomAbstractController;
+use App\Service\Categorie as CategorieService;
 use App\Service\Produit as ProduitService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,7 +22,7 @@ class ProduitController extends CustomAbstractController
      * @param ProduitService $produitService
      * @return JsonResponse
      */
-    public function add(Request $request,ProduitService $produitService ): JsonResponse
+    public function add(Request $request,ProduitService $produitService,CategorieService $categorieService ): JsonResponse
     {
         $errorDebug = "";
         $parameters = $this->getParameters($request);
@@ -37,11 +38,57 @@ class ProduitController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "produit" => $produit
-        ] = $produitService->add($newParameters,$jwt);
+        ] = $produitService->add($newParameters,$jwt,$categorieService);
         if ($error !== "") {
             return $this->sendError($error,$errorDebug);
         }
 
         return $this->sendSuccess("Product created Success",$produit,response::HTTP_CREATED);
+    }
+
+    /**
+     * @Route("/all",methods={"GET"},name="_all")
+     * @param ProduitService $produitService
+     * @return JsonResponse
+     */
+    public function getProduits(ProduitService $produitService):JsonResponse
+    {
+        $errorDebug = "";
+        try{
+            [
+                "error"=>$error,
+                "errorDebug"=>$errorDebug,
+                "produits"=>$produits,
+            ] = $produitService->getProduits();
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if ($errorDebug !== "") {
+            $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("recovery product success",$produits,response::HTTP_ACCEPTED);
+    }
+
+    /**
+     * @Route("/{id}",methods={"GET"},name="ONE")
+     * @param int $id
+     * @return void
+     */
+    public function getProduit(int $id,ProduitService $produitService)
+    {
+        $errorDebug = "";
+        try {
+            [
+                "error"=>$error,
+                "errorDebug"=>$errorDebug,
+                "produit"=>$produit,
+            ] = $produitService->getProduit($id);
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("recover product success",$produit,response::HTTP_ACCEPTED);
     }
 }

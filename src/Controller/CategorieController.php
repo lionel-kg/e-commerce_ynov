@@ -41,4 +41,51 @@ class CategorieController extends CustomAbstractController
 
         return $this->sendSuccess("Categorie created success",$categorie,response::HTTP_CREATED);
     }
+
+    /**
+     * @Route("/all", methods={"GET"} , name="_all")
+     * @param CategorieService $categorieService
+     * @return JsonResponse
+     */
+    public function getCategories(CategorieService $categorieService ):JsonResponse
+    {
+        $errorDebug = "";
+        try {
+            [
+                "error"=>$error,
+                "errorDebug"=>$errorDebug,
+                "categories"=>$categories,
+            ] = $categorieService->getCategories();
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("recover categories success",$categories);
+    }
+
+    /**
+     * @Route("/{id}", methods={"GET"} , name="_one")
+     * @param CategorieService $categorieService
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function getCategorie(CategorieService $categorieService,int $id):JsonResponse
+    {
+        $errorDebug = "";
+        try {
+            [
+                "error"=>$error,
+                "errorDebug"=>$errorDebug,
+                "categories"=>$categorie,
+            ] = $categorieService->getCategorie($id);
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("recover categories success",$categorie);
+    }
 }

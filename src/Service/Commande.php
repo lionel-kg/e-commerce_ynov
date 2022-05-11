@@ -10,6 +10,8 @@ use App\Entity\Commande as CommandeEntity;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Serializer\SerializerInterface;
+
 
 class Commande extends CommandeTool
 {

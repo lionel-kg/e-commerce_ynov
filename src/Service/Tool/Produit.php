@@ -53,5 +53,10 @@ class Produit extends CustomAbstractService
         return $this->em->getRepository(ProduitEntity::class)->findBy($filter);
     }
 
+    public function findAll():array
+    {
+        return $this->em->getRepository(ProduitEntity::class)->findAll();
+    }
+
 
 }

@@ -36,6 +36,11 @@ class Commande
      */
     private $ligneCommande;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=StatutCommande::class, inversedBy="commandes")
+     */
+    private $statutCommande;
+
     public function __construct()
     {
         $this->ligneCommande = new ArrayCollection();
@@ -96,6 +101,18 @@ class Commande
                 $ligneCommande->setCommande(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStatutCommande(): ?StatutCommande
+    {
+        return $this->statutCommande;
+    }
+
+    public function setStatutCommande(?StatutCommande $statutCommande): self
+    {
+        $this->statutCommande = $statutCommande;
 
         return $this;
     }

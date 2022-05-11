@@ -39,4 +39,18 @@ class Categorie extends CustomAbstractService
         ];
         return $this->createSimpleEntity(CategorieEntity::class,$field,$parameters);
     }
+
+    /**
+     * @param int $id
+     * @return CategorieEntity|null
+     */
+    public function findById(int $id):?CategorieEntity
+    {
+        return $this->em->getRepository(CategorieEntity::class)->find($id);
+    }
+
+    public function findAll():array
+    {
+        return $this->em->getRepository(CategorieEntity::class)->findAll();
+    }
 }
