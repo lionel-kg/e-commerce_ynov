@@ -58,5 +58,20 @@ class Produit extends CustomAbstractService
         return $this->em->getRepository(ProduitEntity::class)->findAll();
     }
 
+    /**
+     * @param array $userParameters
+     * @param ProduitEntity $produit
+     * @return ProduitEntity|null
+     */
+    public function editEntity(array $userParameters,ProduitEntity $produit):?ProduitEntity
+    {
+        $field = [
+            "image",
+            "nom",
+            "prix",
+        ];
+        return $this->editSimpleEntity($produit,$field,$userParameters);
+    }
+
 
 }

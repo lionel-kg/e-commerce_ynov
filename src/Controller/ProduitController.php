@@ -47,6 +47,33 @@ class ProduitController extends CustomAbstractController
     }
 
     /**
+     * @Route("/edit/{id}", methods={"POST"},name="_edit")
+     * @param Request $request
+     * @param ProduitService $produitService
+     * @return JsonResponse
+     */
+    public function edit(Request $request,ProduitService $produitService,int $id):JsonResponse
+    {
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        $jwt = $this->getJwt($request);
+        $waitedParameters = [
+            "nom"=>"string",
+            "image"=>"string",
+            "prix"=>"integer",
+        ];
+        ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
+        if($error !== ""){
+            return $this->sendError($error,$error);
+        }
+        ["error"=>$error,"errorDebug"=>$errorDebug,"produit"=>$produit] = $produitService->edit($parameters,$jwt,$id);
+        if($errorDebug !== ""){
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("Product edit success",$produit);
+    }
+
+    /**
      * @Route("/all",methods={"GET"},name="_all")
      * @param ProduitService $produitService
      * @return JsonResponse

@@ -71,7 +71,8 @@ class User extends UserServiceTool
      * @param string $jwt
      * @return array
      */
-    public function edit(array $parameter,string $jwt){
+    public function edit(array $parameter,string $jwt): array
+    {
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","user"=>[]];
         try{

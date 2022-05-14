@@ -50,6 +50,34 @@ class Produit extends ProduitServiceTool
     }
 
     /**
+     * @throws \JsonException
+     */
+    public function edit(array $parameters, string $jwt,string $id):array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","produit"=>[]];
+        $user = $this->checktJwt($jwt);
+        $isAdmin = in_array("ROLE_ADMIN",$user->getRoles());
+
+        try{
+            $produit = $this->findById($id);
+            if($isAdmin === true){
+                $produit = $this->editEntity($parameters,$produit);
+                $this->em->persist($produit);
+                $this->em->flush();
+                $response["produit"] = $produit;
+            } else {
+                $response["error"] = "L'utilisateur n'est pas un admin";
+                return $response;
+            }
+        } catch (\Exception $e){
+            $response["errorDebug"] = sprintf("Exception : %s",$e->getMessage());
+            $response["error"] = "Erreur lors de l'edition du produit";
+        }
+        return $response;
+    }
+
+    /**
      * @return array
      */
     public function getProduits():array
