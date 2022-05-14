@@ -85,6 +85,8 @@ class Produit extends ProduitServiceTool
 
         try{
             $produit = $this->findById($id);
+            dd($produit->getSection()[2]);
+
             if($produit === null){
                 $response["error"] = "Aucun produit trouvé";
             }

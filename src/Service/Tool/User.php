@@ -46,14 +46,19 @@ class User extends CustomAbstractService
 
     /**
      * @param array $userParameters
+     * @param UserEntity $user
      * @return UserEntity
      */
-    public function editEntity(array $userParameters):UserEntity
+    public function editEntity(array $userParameters,UserEntity $user):?UserEntity
     {
         $field = [
-            "email"
+            "email",
+            "nom",
+            "prenom",
+            "pseudo",
+            "dateNaissance",
         ];
-        return $this->editSimpleEntity(UserEntity::class,$field,$userParameters);
+        return $this->editSimpleEntity($user,$field,$userParameters);
     }
 
 }

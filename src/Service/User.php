@@ -68,13 +68,15 @@ class User extends UserServiceTool
 
     /**
      * @param array $parameter
+     * @param string $jwt
      * @return array
      */
-    public function edit(array $parameter){
+    public function edit(array $parameter,string $jwt){
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","user"=>[]];
         try{
-            $user = $this->editEntity($parameter);
+            $user = $this->checktJwt($jwt);
+            $user = $this->editEntity($parameter,$user);
             $this->em->persist($user);
             $this->em->flush();
         } catch (\Exception $e)

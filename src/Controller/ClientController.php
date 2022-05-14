@@ -46,11 +46,24 @@ class ClientController extends CustomAbstractController
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
     }
 
-    public function edit(Request $request,UserService $userService){
+    /**
+     * @Route ("/edit", methods={"POST"}, name="_edit")
+     * @param Request $request
+     * @param UserService $userService
+     * @return JsonResponse
+     */
+    public function edit(Request $request,UserService $userService): JsonResponse
+    {
         $errorDebug = "";
+        $jwt = $this->getJwt($request);
         $parameters = $this->getParameters($request);
         $waitedParameters = [
-            "email"=>"string",
+            "email_OPT" => "string",
+            "nom_OPT"=>"string",
+            "prenom_OPT"=>"string",
+            "pseudo_OPT"=> "string",
+            "dateNaissance_OPT"=>"string",
+
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){
@@ -60,7 +73,7 @@ class ClientController extends CustomAbstractController
             "error" => $error,
             "errorDebug"=> $errorDebug,
             "user"=> $user,
-        ] = $userService->edit($parameters);
+        ] = $userService->edit($newParameters,$jwt);
         return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
     }
 }
