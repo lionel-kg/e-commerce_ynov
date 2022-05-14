@@ -51,6 +51,7 @@ class Commande extends CommandeTool
                 $res = $ligneCommandeService->add($parameters,$produit["produit"],$produit["qte"]);
                 $ligneCommande = $res["ligneCommande"];
                 $commande->addLigneCommande($ligneCommande);
+                $commande->setClient($user);
                 $this->em->persist($ligneCommande);
             }
             $this->em->persist($commande);

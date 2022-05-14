@@ -28,12 +28,6 @@ class Produit
     private $nom;
 
     /**
-     * @ORM\Column(type="integer")
-     * @Groups({"produit_info"})
-     */
-    private $stock;
-
-    /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"produit_info"})
      */
@@ -60,10 +54,16 @@ class Produit
      */
     private $stockTailles;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Section::class, inversedBy="produits")
+     */
+    private $Section;
+
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
         $this->stockTailles = new ArrayCollection();
+        $this->Section = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -79,18 +79,6 @@ class Produit
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getStock(): ?int
-    {
-        return $this->stock;
-    }
-
-    public function setStock(int $stock): self
-    {
-        $this->stock = $stock;
 
         return $this;
     }
@@ -187,6 +175,30 @@ class Produit
                 $stockTaille->setProduit(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Section>
+     */
+    public function getSection(): Collection
+    {
+        return $this->Section;
+    }
+
+    public function addSection(Section $section): self
+    {
+        if (!$this->Section->contains($section)) {
+            $this->Section[] = $section;
+        }
+
+        return $this;
+    }
+
+    public function removeSection(Section $section): self
+    {
+        $this->Section->removeElement($section);
 
         return $this;
     }

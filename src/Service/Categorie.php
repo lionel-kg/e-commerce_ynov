@@ -49,12 +49,14 @@ class Categorie extends CategorieTool
         $response = ["error"=>"","errorDebug"=>"","categorie"=>[]];
         try{
             $categorie = $this->findById($id);
+            $produits = $categorie->getProduits();
             if ($categorie === null) {
                 $response["error"] = "Aucune catégorie trouvé";
             }
             $categorie = $this->getInfoSerialize([$categorie],["categorie_info"]);
-            dd($categorie);
+            $produits = $this->getInfoSerialize([$produits],["produit_info"]);
             $response["categorie"] = $categorie;
+            $response['produits'] = $produits;
         } catch (\Exception $e) {
             $errorDebug = sprintf("Exception : %s", $e->getMessage());
         }
@@ -62,6 +64,7 @@ class Categorie extends CategorieTool
             $response["errorDebug"] = $errorDebug;
             $response["error"] = "erreur lors de la récuperation de la categorie";
         }
+        dd($response);
         return $response;
     }
 

@@ -78,7 +78,8 @@ class CategorieController extends CustomAbstractController
             [
                 "error"=>$error,
                 "errorDebug"=>$errorDebug,
-                "categories"=>$categorie,
+                "categorie"=>$categorie,
+                "produits"=>$produits,
             ] = $categorieService->getCategorie($id);
         } catch (\Exception $e) {
             $errorDebug = sprintf("Exception : %s",$e->getMessage());
@@ -86,6 +87,6 @@ class CategorieController extends CustomAbstractController
         if($errorDebug !== ""){
             $this->sendError($error,$errorDebug);
         }
-        return $this->sendSuccess("recover categories success",$categorie);
+        return $this->sendSuccess("recover categories success",[$categorie,$produits]);
     }
 }

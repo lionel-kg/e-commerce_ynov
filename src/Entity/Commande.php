@@ -41,6 +41,11 @@ class Commande
      */
     private $statutCommande;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="commandes")
+     */
+    private $client;
+
     public function __construct()
     {
         $this->ligneCommande = new ArrayCollection();
@@ -113,6 +118,18 @@ class Commande
     public function setStatutCommande(?StatutCommande $statutCommande): self
     {
         $this->statutCommande = $statutCommande;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

@@ -8,6 +8,7 @@ use App\Entity\LigneCommande as LigneCommandeEntity;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class LigneCommande extends LigneCommandeTool
 {
@@ -24,6 +25,7 @@ class LigneCommande extends LigneCommandeTool
     /**
      * @param array $parameters
      * @param ProduitEntity $produit
+     * @param string $qte
      * @return array
      */
     public function add(
