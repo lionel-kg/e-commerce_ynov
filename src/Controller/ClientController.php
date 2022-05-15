@@ -44,6 +44,9 @@ class ClientController extends CustomAbstractController
             "errorDebug" => $errorDebug,
             "user" => $user,
         ] = $userService->add($newParameters,ClientEntity::class);
+        if($errorDebug !== ""){
+            $this->sendError($error,$errorDebug);
+        }
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
     }
 
@@ -96,5 +99,25 @@ class ClientController extends CustomAbstractController
             "commandes"=>$commandes,
         ] = $userService->getCommande($jwt,$commandeService);
         return $this->sendSuccess("recover User Commande",$commandes,response::HTTP_ACCEPTED);
+    }
+
+    /**
+     * @Route("/me",methods={"GET"},name="")
+     * @param Request $request
+     * @param UserService $userService
+     * @param CommandeService $commandeService
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function getUserInfo(Request $request, UserService $userService,CommandeService $commandeService):JsonResponse
+    {
+        $errorDebug = "";
+        $jwt = $this->getJwt($request);
+        [
+            "error"=>$error,
+            "errorDebug"=>$errorDebug,
+            "client"=>$client,
+        ] = $userService->getUser($jwt);
+        return $this->sendSuccess("recover User Commande",$client,response::HTTP_ACCEPTED);
     }
 }

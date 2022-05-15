@@ -123,6 +123,31 @@ class User extends UserServiceTool
             $response["error"] = "Erreur lors de la modification de l'utilisateur";
         }
        return $response;
+    }
+
+    /**
+     * @param string $jwt
+     * @return array
+     * @throws \JsonException
+     */
+    public function getUser(string $jwt):array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","client"=>[]];
+        $client = $this->checktJwt($jwt);
+        if($client === null){
+            $response["error"] = "Aucun client trouvé";
+            return $response;
+        }
+        try {
+
+            $client = $this->getInfoSerialize([$client],["user_info"]);
+            $response["client"] = $client;
+        } catch (\Exception $e) {
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la modification de l'utilisateur";
+        }
+        return $response;
 
     }
 }
