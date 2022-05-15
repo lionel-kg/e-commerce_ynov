@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Entity\Produit as ProduitEntity;
 use App\Service\Categorie as CategorieService;
+use App\Service\Section as SectionService;
 use App\Service\Tool\Produit as ProduitServiceTool;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -26,19 +27,38 @@ class Produit extends ProduitServiceTool
      * @param array $parameter
      * @param string $jwt
      * @param CategorieService $categorieService
+     * @param Section $sectionService
      * @return array
+     * @throws \JsonException
      */
-    public function add(array $parameter,string $jwt, CategorieService $categorieService ):array
+    public function add(array $parameter,string $jwt, CategorieService $categorieService, SectionService $sectionService ):array
     {
         $errorDebug = "";
         $response = ["error"=>"", "errorDebug"=>"","produit"=>[]];
         $user = $this->checktJwt($jwt);
+        $isAdmin = in_array("ROLE_ADMIN",$user->getRoles(),true);
         try{
-            $produit = $this->createEntity($parameter);
-            $categorie = $categorieService->getCategorie($parameter["id"]);
-            $this->em->persist($produit);
-            $this->em->flush();
-            $response["produit"] = $produit->getId();
+            if($isAdmin === true){
+                $produit = $this->createEntity($parameter);
+                $categorie = $categorieService->getCategorie($parameter["id"]);
+                if($categorie === null){
+                    $response["error"] = "Aucune catégorie trouvé";
+                    return $response;
+                }
+                $section = $sectionService->getSection($parameter["sectionId"]);
+                if($section === null){
+                    $response["error"] = "Aucune section trouvé";
+                    return $response;
+                }
+                $produit->setCategorie($categorie);
+                $produit->addSection($section);
+                $this->em->persist($produit);
+                $this->em->flush();
+                $response["produit"] = $produit->getId();
+            } else {
+                $response["error"] = "L'utilisateur n'est pas un admin";
+                return $response;
+            }
         } catch (\Exception $e){
             $errorDebug = sprintf('Exception : %s', $e->getMessage());
         }

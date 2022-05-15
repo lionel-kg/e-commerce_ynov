@@ -25,11 +25,6 @@ class Section
     private $libelle;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image;
-
-    /**
      * @ORM\ManyToMany(targetEntity=Produit::class, mappedBy="Section")
      */
     private $produits;
@@ -52,18 +47,6 @@ class Section
     public function setLibelle(string $libelle): self
     {
         $this->libelle = $libelle;
-
-        return $this;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
 
         return $this;
     }
