@@ -25,6 +25,7 @@ class ClientController extends CustomAbstractController
     public function add(Request $request, UserService $userService): JsonResponse
     {
         $errorDebug = "";
+        dd($request->request);
         $parameters = $this->getParameters($request);
         $waitedParameters = [
             "email" => "string",
