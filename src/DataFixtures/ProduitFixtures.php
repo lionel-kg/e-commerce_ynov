@@ -30,7 +30,7 @@ class ProduitFixtures extends Fixture
         foreach($data["sections"] as $sec){
             $section = new Section();
             $section->setLibelle($sec);
-            $section->setImage("https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/7a5deae8-7208-44ba-94e6-01f74793d174/tee-shirt-imprime-floral-sportswear-jdi-pour-gDwlms.jpg");
+            //$section->setImage("https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/7a5deae8-7208-44ba-94e6-01f74793d174/tee-shirt-imprime-floral-sportswear-jdi-pour-gDwlms.jpg");
             $manager->persist($section);
             $sections[] = $section;
         }
