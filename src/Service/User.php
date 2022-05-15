@@ -62,7 +62,6 @@ class User extends UserServiceTool
            $response["errorDebug"] = $errorDebug;
            $response["error"] = "Erreur lors de l'ajout de l'utilisateur";
        }
-       dd($response);
        return $response;
     }
 
