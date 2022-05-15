@@ -44,6 +44,9 @@ class ClientController extends CustomAbstractController
             "errorDebug" => $errorDebug,
             "user" => $user,
         ] = $userService->add($newParameters,ClientEntity::class);
+        if($errorDebug !== ""){
+            $this->sendError($error,$errorDebug);
+        }
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
     }
 
