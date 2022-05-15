@@ -25,7 +25,6 @@ class ClientController extends CustomAbstractController
     public function add(Request $request, UserService $userService): JsonResponse
     {
         $errorDebug = "";
-        dd($request->request);
         $parameters = $this->getParameters($request);
         $waitedParameters = [
             "email" => "string",
@@ -97,5 +96,25 @@ class ClientController extends CustomAbstractController
             "commandes"=>$commandes,
         ] = $userService->getCommande($jwt,$commandeService);
         return $this->sendSuccess("recover User Commande",$commandes,response::HTTP_ACCEPTED);
+    }
+
+    /**
+     * @Route("/me",methods={"GET"},name="")
+     * @param Request $request
+     * @param UserService $userService
+     * @param CommandeService $commandeService
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function getUserInfo(Request $request, UserService $userService,CommandeService $commandeService):JsonResponse
+    {
+        $errorDebug = "";
+        $jwt = $this->getJwt($request);
+        [
+            "error"=>$error,
+            "errorDebug"=>$errorDebug,
+            "client"=>$client,
+        ] = $userService->getUser($jwt);
+        return $this->sendSuccess("recover User Commande",$client,response::HTTP_ACCEPTED);
     }
 }
