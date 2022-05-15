@@ -23,11 +23,13 @@ class Commande
 
     /**
      * @ORM\Column(type="date")
+     * @Groups({"commande_info"})
      */
     private $dateEmission;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"commande_info"})
      */
     private $prix;
 

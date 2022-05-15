@@ -71,13 +71,17 @@ class Commande extends CommandeTool
      * @param $id
      * @return CommandeEntity|null
      */
-    public function findById($id):?CommandeEntity
+    public function getCommande($id):?CommandeEntity
     {
-        return $this->em->getRepository(CommnadeEntity::class)->find($id);
+        return $this->findById($id);
     }
 
-    public function findFromFilter(array $filter):array
+    /**
+     * @param array $filter
+     * @return array
+     */
+    public function getFromFilter(array $filter):array
     {
-        return $this->em->getRepository(CommandeEntity::class)->findBy($filter);
+        return $this->findBy($filter);
     }
 }

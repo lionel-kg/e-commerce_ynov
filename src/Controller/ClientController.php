@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Client as ClientEntity;
+use App\Service\Commande as CommandeService;
 use App\Service\User as UserService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -75,5 +76,25 @@ class ClientController extends CustomAbstractController
             "user"=> $user,
         ] = $userService->edit($newParameters,$jwt);
         return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
+    }
+
+    /**
+     * @Route("/commande",methods={"GET"},name="")
+     * @param Request $request
+     * @param UserService $userService
+     * @param CommandeService $commandeService
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function getUserCommande(Request $request, UserService $userService,CommandeService $commandeService):JsonResponse
+    {
+        $errorDebug = "";
+        $jwt = $this->getJwt($request);
+        [
+            "error"=>$error,
+            "errorDebug"=>$errorDebug,
+            "commandes"=>$commandes,
+        ] = $userService->getCommande($jwt,$commandeService);
+        return $this->sendSuccess("recover User Commande",$commandes,response::HTTP_ACCEPTED);
     }
 }

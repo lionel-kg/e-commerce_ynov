@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Service;
+
 use App\Entity\Admin as AdminEntity;
+use App\Service\Commande as CommandeService;
 use App\Entity\Client as ClientEntity;
 use \App\Service\Tool\User as UserServiceTool;
 use \App\Entity\User as UserEntity;
@@ -62,7 +64,6 @@ class User extends UserServiceTool
            $response["errorDebug"] = $errorDebug;
            $response["error"] = "Erreur lors de l'ajout de l'utilisateur";
        }
-       dd($response);
        return $response;
     }
 
@@ -89,5 +90,39 @@ class User extends UserServiceTool
             $response["error"] = "Erreur lors de la modification de l'utilisateur";
         }
         return $response;
+    }
+
+    /**
+     * @param string $jwt
+     * @param CommandeService $commandeService
+     * @return array
+     * @throws \JsonException
+     */
+    public function getCommande(string $jwt,CommandeService $commandeService):array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","commandes"=>[],"client"=>[],"statutCommande"=>[]];
+        $client = $this->checktJwt($jwt);
+        if($client === null){
+            $response["error"] = "Aucun client trouvé";
+            return $response;
+        }
+        try {
+            $commandes = $commandeService->getFromFilter(["id"=>3]);
+            $commandes = $this->getInfoSerialize($commandes,["commande_info"]);
+            $client = $this->getInfoSerialize($client,["user_info"]);
+            //$statutCommande = $this->getInfoSerialize($statutCommande,["statut_info"]);
+
+            if ($commandes === null) {
+                $response["error"] = "Ce client ne posséde pas de commande";
+            }
+            $response["commandes"] = $commandes;
+            $response["client"] = $client;
+        } catch (\Exception $e) {
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la modification de l'utilisateur";
+        }
+       return $response;
+
     }
 }

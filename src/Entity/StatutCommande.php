@@ -21,6 +21,7 @@ class StatutCommande
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"statut_info"})
      */
     private $libelle;
 
