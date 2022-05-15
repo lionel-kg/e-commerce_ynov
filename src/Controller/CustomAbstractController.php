@@ -420,12 +420,7 @@ abstract class CustomAbstractController extends AbstractController
     ): JsonResponse
     {
         $resMessage = $message;
-        if ($this->getParameter("APP_ENV") !== "prod") {
-            $resMessage = $messageDebug;
-            if (empty($messageDebug)) {
-                $resMessage = $message;
-            }
-        }
+
         return $this->sendJsonResponse("error", $resMessage, $data, $httpCode);
     }
 
