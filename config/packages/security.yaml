@@ -15,7 +15,6 @@ security:
             entity:
                 class: App\Entity\Client
                 property: email
-
         admin:
             entity:
                 class: App\Entity\Admin

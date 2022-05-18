@@ -41,6 +41,7 @@ class User extends UserServiceTool
     {
        $errorDebug = "";
        $response = ["error" => "", "errorDebug" => "","user"=> []];
+
        try {
            $user = $this->createEntity($parameter,$entityClassName);
            $user->setPassword($this->passwordHasher->hashPassword($user,$parameter['password']));

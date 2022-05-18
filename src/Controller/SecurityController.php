@@ -34,6 +34,7 @@ class SecurityController extends CustomAbstractController
     public function api_login_client():JsonResponse
     {
         $user = $this->getUser();
+        dd($user);
         return $this->json(array(
             'email' => $user->getUserIdentifier(),
             'roles' => $user->getRoles(),
