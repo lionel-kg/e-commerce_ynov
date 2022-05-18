@@ -41,6 +41,11 @@ class UserController extends CustomAbstractController
         return $this->sendSuccess("User created success",$user, response::HTTP_CREATED);
     }
 
+    /**
+     * @param Request $request
+     * @param UserService $userService
+     * @return JsonResponse
+     */
     public function edit(Request $request,UserService $userService){
         $errorDebug = "";
         $parameters = $this->getParameters($request);

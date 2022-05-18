@@ -33,7 +33,6 @@ class ClientController extends CustomAbstractController
             "pseudo"=> "string",
             "password"=>"string",
             "dateNaissance"=>"string",
-
         ];
         ["error" => $error , "parameters" => $newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){
@@ -67,7 +66,6 @@ class ClientController extends CustomAbstractController
             "prenom_OPT"=>"string",
             "pseudo_OPT"=> "string",
             "dateNaissance_OPT"=>"string",
-
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){

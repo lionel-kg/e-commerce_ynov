@@ -149,5 +149,67 @@ class Produit extends ProduitServiceTool
         return $response;
     }
 
+    /**
+     * @param array $parameters
+     * @param Categorie $categorieService
+     * @return array
+     */
+    public function getProduitFromCategorie(array $parameters,CategorieService $categorieService): array
+    {
+        $errorDebug ="";
+        $response = ["error"=>"","errorDebug"=>"","produits"=>[]];
+        try {
+            $categorie = $categorieService->findById($parameters["categorie"]);
+            if ($categorie === null ) {
+                $response["error"] = "Aucune categorie trouvé";
+            }
+            if($parameters["ordre"] === null || $parameters["ordre"] ==="" || !isset($parameters["ordre"])){
+                $parameters["ordre"] = "ASC";
+            }
+            $produits = $this->findFromFilter(["categorie"=>$categorie],["prix"=> $parameters["ordre"]]);
+            if($produits === null){
+                $response["error"] = "Aucun produit trouvé";
+            }
+            $produits = $this->getInfoSerialize([$produits],["produit_info"]);
+            $response["produits"] = $produits;
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s" , $e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la récuperation des produits";
+        }
+        return $response;
+    }
+
+    /**
+     * @param array $parameters
+     * @param Categorie $categorieService
+     * @return array
+     */
+    public function searchProduit(array $parameters,CategorieService $categorieService): array
+    {
+        $errorDebug ="";
+        $response = ["error"=>"","errorDebug"=>"","produits"=>[]];
+        try {
+            if(isset($parameters["name"]) || $parameters["name"] !== ""){
+                $produits = $this->findByName($parameters["name"]);
+            } else {
+                $produits = $this->getProduits();
+            }
+            if($produits === null){
+                $response["error"] = "Aucun produit trouvé";
+            }
+            $produits = $this->getInfoSerialize([$produits],["produit_info"]);
+            $response["produits"] = $produits;
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s" , $e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la récuperation des produits";
+        }
+        return $response;
+    }
 
 }

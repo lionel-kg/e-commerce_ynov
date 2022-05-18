@@ -21,6 +21,7 @@ class ProduitController extends CustomAbstractController
      * @param Request $request
      * @param ProduitService $produitService
      * @return JsonResponse
+     * @throws \JsonException
      */
     public function add(Request $request,ProduitService $produitService,CategorieService $categorieService ): JsonResponse
     {
@@ -91,7 +92,7 @@ class ProduitController extends CustomAbstractController
             $errorDebug = sprintf("Exception : %s",$e->getMessage());
         }
         if ($errorDebug !== "") {
-            $this->sendError($error,$errorDebug);
+            return $this->sendError($error,$errorDebug);
         }
         return $this->sendSuccess("recovery product success",$produits,response::HTTP_ACCEPTED);
     }
@@ -99,6 +100,7 @@ class ProduitController extends CustomAbstractController
     /**
      * @Route("/{id}",methods={"GET"},name="ONE")
      * @param int $id
+     * @param ProduitService $produitService
      * @return void
      */
     public function getProduit(int $id,ProduitService $produitService)
@@ -114,8 +116,49 @@ class ProduitController extends CustomAbstractController
             $errorDebug = sprintf("Exception : %s",$e->getMessage());
         }
         if($errorDebug !== ""){
-            $this->sendError($error,$errorDebug);
+            return $this->sendError($error,$errorDebug);
         }
         return $this->sendSuccess("recover product success",$produit,response::HTTP_ACCEPTED);
+    }
+
+    /**
+     * @Route("/filtre",methods={"POST"},name="_filter")
+     * @param Request $request
+     * @param ProduitService $produitService
+     * @param CategorieService $categorieService
+     * @return JsonResponse
+     */
+    public function getProductFromCategorie(Request $request,ProduitService $produitService,CategorieService $categorieService){
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        try {
+            ["error"=>$error,"errorDebug"=>$errorDebug,"produits"=>$produits] = $produitService->getProduitFromCategorie($parameters,$categorieService);
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if($errorDebug !== ""){
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("Recover product success",$produits,response::HTTP_ACCEPTED);
+    }
+    /**
+     * @Route("/search",methods={"POST"},name="_search")
+     * @param Request $request
+     * @param ProduitService $produitService
+     * @param CategorieService $categorieService
+     * @return JsonResponse
+     */
+    public function searchProductByName(Request $request,ProduitService $produitService,CategorieService $categorieService){
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        try {
+            ["error"=>$error,"errorDebug"=>$errorDebug,"produits"=>$produits] = $produitService->searchProduit($parameters,$categorieService);
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s",$e->getMessage());
+        }
+        if($errorDebug !== ""){
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("Recover product success",$produits,response::HTTP_ACCEPTED);
     }
 }

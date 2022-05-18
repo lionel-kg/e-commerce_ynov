@@ -46,11 +46,20 @@ class Produit extends CustomAbstractService
 
     /**
      * @param array $filter
+     * @param array $orderBy
      * @return array
      */
-    public function findFromFilter(array $filter):array
+    public function findFromFilter(array $filter,array $orderBy = ["prix" => 'ASC']):array
     {
-        return $this->em->getRepository(ProduitEntity::class)->findBy($filter);
+        return $this->em->getRepository(ProduitEntity::class)->findBy($filter,$orderBy);
+    }
+
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    public function findByName(string $name){
+        return $this->em->getRepository(ProduitEntity::class)->findByName($name);
     }
 
     public function findAll():array
