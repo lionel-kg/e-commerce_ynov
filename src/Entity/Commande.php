@@ -51,6 +51,7 @@ class Commande
     public function __construct()
     {
         $this->ligneCommande = new ArrayCollection();
+        $this->dateEmission = new \DateTime();
     }
 
     public function getId(): ?int

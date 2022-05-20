@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Service\Commande as CommandeService;
 use App\Service\Produit as ProduitService;
-use App\Service\LigneCommande as LigneCommandeService;
+use App\Service\StatutCommande as LigneCommandeService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

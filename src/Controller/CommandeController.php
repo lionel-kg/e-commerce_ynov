@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\Commande as CommandeService;
+use App\Service\StatutCommande as StatutCommandeService;
 use App\Service\LigneCommande as LigneCommandeService;
 use App\Service\Produit as ProduitService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,13 +20,12 @@ class CommandeController extends CustomAbstractController
     /**
      * @Route("/add",methods={"POST"}, name="_add")
      */
-    public function add(Request $request,CommandeService $commandeService,LigneCommandeService $ligneCommandeService,ProduitService $produitService ): JsonResponse
+    public function add(Request $request,CommandeService $commandeService,LigneCommandeService $ligneCommandeService,ProduitService $produitService,StatutCommandeService $statutCommandeService ): JsonResponse
     {
         $errorDebug = "";
         $jwt = $this->getJwt($request);
         $parameters = $this->getParameters($request);
         $waitedParameter = [
-            "dateEmission"=>"date",
             "prix" => "float",
             "panier"=>"array"
         ];
@@ -37,8 +37,8 @@ class CommandeController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "commande" => $commande
-         ] = $commandeService->add($newParameters,$ligneCommandeService,$produitService,$commandeService,$jwt);
-        if ($error !== "") {
+         ] = $commandeService->add($newParameters,$ligneCommandeService,$produitService,$commandeService,$statutCommandeService,$jwt);
+        if ($errorDebug !== "") {
             return $this->sendError($error,$errorDebug);
         }
         return $this->sendSuccess("Commande created success",$commande, response::HTTP_CREATED);

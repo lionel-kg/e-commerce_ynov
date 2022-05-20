@@ -3,7 +3,9 @@
 namespace App\Service;
 
 use App\Service\Tool\Commande as CommandeTool;
+use App\Service\StatutCommande as StatutCommandeService;
 use App\Service\LigneCommande as LigneCommandeService;
+
 use App\Service\Produit as ProduitService;
 use App\Service\Commande as CommandeService;
 use App\Entity\Commande as CommandeEntity;
@@ -30,6 +32,7 @@ class Commande extends CommandeTool
         LigneCommandeService $ligneCommandeService,
         ProduitService $produitService ,
         CommandeService $commandeService,
+        StatutCommandeService $statutCommandeService,
         string $jwt )
     {
         $errorDebug = "";
@@ -38,15 +41,23 @@ class Commande extends CommandeTool
         try {
             $commande = $this->createEntity($parameters);
             $panier = $parameters["panier"];
-            /*
-                $panier = [];
-                $produit1 = $produitService->findById(1);
-                $produit2 = $produitService->findById(2);
-                $panier[0]["produit"] = $produit1;
-                $panier[0]["qte"] = 15;
-                $panier[1]["produit"] = $produit2;
-                $panier[1]["qte"] = 25;
-            */
+            $array = explode(",",$panier);
+            $panier = [];
+
+            $statut = $statutCommandeService->getStatutById(rand(1,6));
+            if($statut === null){
+                $response["error"] = "Aucun statut trouvé";
+            }
+            for($i = 0; $i < count($array); $i++){
+                if($i%2 === 0){
+                    $panier[$i]["produit"] = $produitService->findById($array[$i]);
+                } else {
+                    $panier[$i-1]["qte"] = $array[$i];
+                }
+            }
+            if(count($panier) <= 0 ){
+                $response["error"] = "votre panier est vide veuillez le remplir";
+            }
             foreach ($panier as $produit ){
                 $res = $ligneCommandeService->add($parameters,$produit["produit"],$produit["qte"]);
                 $ligneCommande = $res["ligneCommande"];
@@ -54,6 +65,7 @@ class Commande extends CommandeTool
                 $commande->setClient($user);
                 $this->em->persist($ligneCommande);
             }
+            $commande->setStatutCommande($statut);
             $this->em->persist($commande);
             $this->em->flush();
             $response["commande"] = $commande->getId();

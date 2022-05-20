@@ -34,7 +34,6 @@ class Commande extends CustomAbstractService
      */
     public function createEntity(array $parameters):CommandeEntity{
         $field = [
-            "dateEmission",
             "prix",
         ];
         return $this->createSimpleEntity(CommandeEntity::class,$field,$parameters);
