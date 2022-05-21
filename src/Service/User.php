@@ -102,23 +102,23 @@ class User extends UserServiceTool
     public function getCommande(string $jwt,CommandeService $commandeService):array
     {
         $errorDebug = "";
-        $response = ["error"=>"","errorDebug"=>"","commandes"=>[],"client"=>[],"statutCommande"=>[]];
+        $response = ["error"=>"","errorDebug"=>"","commandes"=>[],"statutCommande"=>[]];
         $client = $this->checktJwt($jwt);
         if($client === null){
             $response["error"] = "Aucun client trouvé";
             return $response;
         }
         try {
-            $commandes = $commandeService->getFromFilter(["id"=>3]);
-            $commandes = $this->getInfoSerialize($commandes,["commande_info"]);
-            $client = $this->getInfoSerialize($client,["user_info"]);
-            //$statutCommande = $this->getInfoSerialize($statutCommande,["statut_info"]);
-
+            $listeCommande = [];
+            $commandes = $commandeService->getFromFilter(["client"=>$client]);
+            foreach ($commandes as $key =>$commande){
+                $listeCommande [$key] = $this->getInfoSerialize([$commande],["commande_info"]);
+            }
             if ($commandes === null) {
                 $response["error"] = "Ce client ne posséde pas de commande";
             }
-            $response["commandes"] = $commandes;
-            $response["client"] = $client;
+            $response["commandes"] = $listeCommande;
+            //$response["client"] = $client;
         } catch (\Exception $e) {
             $response["errorDebug"] = $errorDebug;
             $response["error"] = "Erreur lors de la modification de l'utilisateur";

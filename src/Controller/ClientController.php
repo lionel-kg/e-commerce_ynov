@@ -80,7 +80,7 @@ class ClientController extends CustomAbstractController
     }
 
     /**
-     * @Route("/commande",methods={"GET"},name="")
+     * @Route("/commande",methods={"GET"},name="_commande")
      * @param Request $request
      * @param UserService $userService
      * @param CommandeService $commandeService

@@ -18,6 +18,7 @@ class Commande
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"commande_info"})
      */
     private $id;
 
@@ -40,6 +41,7 @@ class Commande
 
     /**
      * @ORM\ManyToOne(targetEntity=StatutCommande::class, inversedBy="commandes")
+     * @Groups({"commande_info"})
      */
     private $statutCommande;
 

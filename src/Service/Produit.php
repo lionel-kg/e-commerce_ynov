@@ -195,7 +195,7 @@ class Produit extends ProduitServiceTool
             if(isset($parameters["name"]) || $parameters["name"] !== ""){
                 $produits = $this->findByName($parameters["name"]);
             } else {
-                $produits = $this->getProduits();
+                return $response;
             }
             if($produits === null){
                 $response["error"] = "Aucun produit trouvé";

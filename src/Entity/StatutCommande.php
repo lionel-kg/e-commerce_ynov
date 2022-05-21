@@ -18,12 +18,13 @@ class StatutCommande
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"commande_info"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"statut_info"})
+     * @Groups({"commande_info"})
      */
     private $libelle;
 
