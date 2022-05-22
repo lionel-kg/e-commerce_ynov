@@ -60,6 +60,11 @@ class Produit
      */
     private $Section;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $couleur;
+
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
@@ -200,6 +205,18 @@ class Produit
     public function removeSection(Section $section): self
     {
         $this->Section->removeElement($section);
+
+        return $this;
+    }
+
+    public function getCouleur(): ?string
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(?string $couleur): self
+    {
+        $this->couleur = $couleur;
 
         return $this;
     }

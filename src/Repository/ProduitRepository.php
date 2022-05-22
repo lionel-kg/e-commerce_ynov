@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
+use App\Entity\Section;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
@@ -83,5 +84,18 @@ class ProduitRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
             ;
+    }
+
+    /**
+     * @param Section $section
+     * @return float|int|mixed|string
+     */
+    public function findFromSection(Section $section){
+        return $this->createQueryBuilder(p)
+            ->leftJoin("produit_section","ps")
+            ->andWhere("ps.section",":section")
+            ->setParameter("section",$section)
+            ->getQuery()
+            ->getResult();
     }
 }

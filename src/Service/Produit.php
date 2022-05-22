@@ -154,19 +154,30 @@ class Produit extends ProduitServiceTool
      * @param Categorie $categorieService
      * @return array
      */
-    public function getProduitFromCategorie(array $parameters,CategorieService $categorieService): array
+    public function getProduitFromCategorie(array $parameters,CategorieService $categorieService, SectionService $sectionService): array
     {
         $errorDebug ="";
         $response = ["error"=>"","errorDebug"=>"","produits"=>[]];
         try {
-            $categorie = $categorieService->findById($parameters["categorie"]);
-            if ($categorie === null ) {
-                $response["error"] = "Aucune categorie trouvé";
+            $produits = null;
+            if(isset($parameters["categorie"]) && $parameters["categorie"] !== "")
+            {
+                $categorie = $categorieService->findById($parameters["categorie"]);
+                if ($categorie === null ) {
+                    $response["error"] = "Aucune categorie trouvé";
+                }
+                if(!isset($parameters["ordre"]) || $parameters["ordre"] === null || $parameters["ordre"] === ""){
+                    $parameters["ordre"] = "ASC";
+                }
+                    $produits = $this->findFromFilter(["categorie"=>$categorie],["prix"=> $parameters["ordre"]]);
+            } elseif(isset($parameters["section"]) && $parameters["section"] !== ""){
+                $section = $sectionService->findSectionById($parameters["section"])["section"];
+                if ($section === null ) {
+                    $response["error"] = "Aucune section trouvé";
+                }
+                $produits = $sectionService->findSectionById($parameters["section"])["produits"];
+                $produits[0]->getNom();
             }
-            if($parameters["ordre"] === null || $parameters["ordre"] ==="" || !isset($parameters["ordre"])){
-                $parameters["ordre"] = "ASC";
-            }
-            $produits = $this->findFromFilter(["categorie"=>$categorie],["prix"=> $parameters["ordre"]]);
             if($produits === null){
                 $response["error"] = "Aucun produit trouvé";
             }

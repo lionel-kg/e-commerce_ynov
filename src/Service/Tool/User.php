@@ -2,6 +2,7 @@
 
 namespace App\Service\Tool;
 
+use App\Entity\Client;
 use App\Service\CustomAbstractService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -59,6 +60,23 @@ class User extends CustomAbstractService
             "dateNaissance",
         ];
         return $this->editSimpleEntity($user,$field,$userParameters);
+    }
+
+    /**
+     * @param int $id
+     * @return UserEntity|null
+     */
+    public function findById(int $id): ?UserEntity
+    {
+        return $this->em->getRepository(Client::class)->find($id);
+    }
+
+    /**
+     * @return UserEntity|null
+     */
+    public function findALl():?UserEntity
+    {
+        return $this->em->getRepository(Client::class)->findAll();
     }
 
 }

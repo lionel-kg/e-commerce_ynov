@@ -72,6 +72,7 @@ class User extends UserServiceTool
      * @param array $parameter
      * @param string $jwt
      * @return array
+     * @throws \JsonException
      */
     public function edit(array $parameter,string $jwt): array
     {
@@ -80,8 +81,68 @@ class User extends UserServiceTool
         try{
             $user = $this->checktJwt($jwt);
             $user = $this->editEntity($parameter,$user);
+            if(isset($parameter["nom"]) && $parameter["nom"] === ""){
+                $parameter["nom"] = $user->getNom();
+            }
+            if(isset($parameter["prenom"]) && $parameter["prenom"] === ""){
+                $parameter["prenom"] = $user->getPrenom();
+            }
+            if(isset($parameter["pseudo"]) && $parameter["pseudo"] === "") {
+                $parameter["pseudo"] = $user->getPseudo();
+            }
             $this->em->persist($user);
             $this->em->flush();
+        } catch (\Exception $e)
+        {
+            $errorDebug = sprintf("Exception : %s", $e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la modification de l'utilisateur";
+        }
+        return $response;
+    }
+
+    /**
+     * @param array $parameter
+     * @param string $jwt
+     * @param int $id
+     * @return array
+     * @throws \JsonException
+     */
+    public function adminEdit(array $parameter,string $jwt,int $id): array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","user"=>[]];
+        $admin = $this->checktJwt($jwt);
+        $isAdmin = false;
+        if(in_array("ROLE_ADMIN",$admin->getRoles(),true)){
+            $isAdmin = true;
+        }
+        try{
+            if($isAdmin === true ) {
+                $user = $this->getUserById($id);
+                if(isset($parameter["role"])){
+                    if(!in_array($parameter["role"],$admin->getRoles(),true)){
+                        $user->setRoles([$parameter["role"]]);
+                    }
+                }
+                if(isset($parameter["nom"]) && $parameter["nom"] === ""){
+                    $parameter["nom"] = $user->getNom();
+                }
+                if(isset($parameter["prenom"]) && $parameter["prenom"] === ""){
+                    $parameter["prenom"] = $user->getPrenom();
+                }
+                if(isset($parameter["pseudo"]) && $parameter["pseudo"] === ""){
+                    $parameter["pseudo"] = $user->getPseudo();
+                }
+                $user = $this->editEntity($parameter,$user);
+                $this->em->persist($user);
+                $this->em->flush();
+            } else {
+                $response["error"] = "L'utilisateur connecter n'est pas un admin";
+            }
+
         } catch (\Exception $e)
         {
             $errorDebug = sprintf("Exception : %s", $e->getMessage());
@@ -150,5 +211,59 @@ class User extends UserServiceTool
         }
         return $response;
 
+    }
+
+    /**
+     * @param int $id
+     * @return UserEntity|null
+     */
+    public function getUserById(int $id):?UserEntity
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","user"=>[]];
+        try {
+            $user = $this->findById($id);
+            if($user === null ){
+                $response["error"] = "Aucun utilisateur trouvé";
+            }
+            $response["user"] = $user;
+        } catch (\Exception $e) {
+            $response["errorDebug"] = sprintf("Exception : %s",$e->getMessage());
+            $response["error"] = "Erreur lors de la récuperation de l'utilisateur";
+        }
+        return $response["user"];
+    }
+
+    /**
+     * @param string $jwt
+     * @return array
+     * @throws \JsonException
+     */
+    public function getAllUser(string $jwt):array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","users"=>[]];
+        $admin = $this->checktJwt($jwt);
+        $isAdmin = false;
+        if($admin === null){
+            $response["error"] = "Vous n'êtes pas connecté ";
+            return $response;
+        }
+        if(in_array("ROLE_ADMIN",$admin->getRoles(),true)){
+            $isAdmin = true;
+        }
+        try {
+            if($isAdmin === true){
+                $user = $this->findALl();
+                if($user === null){
+                    $response["error"] = "Aucun utilisateur trouvé";
+                }
+                $response["users"] = $user;
+            }
+        } catch (\Exception $e) {
+            $response["errorDebug"] = sprintf("Exception : %s",$e->getMessage());
+            $response["error"] = "Erreur lors de la récuperation des utilisateur";
+        }
+        $response;
     }
 }

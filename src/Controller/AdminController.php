@@ -76,4 +76,54 @@ class AdminController extends CustomAbstractController
         ] = $userService->edit($newParameters,$jwt);
         return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
     }
+
+    /**
+     * @Route("/edit/{id}",methods={"POST"},name="_user_edit")
+     * @param Request $request
+     * @param UserService $userService
+     * @param string $id
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function AdminEdit(Request $request,UserService $userService,string $id){
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        $jwt = $this->getJwt($request);
+        $waitedParameters = [
+            "email_OPT" => "string",
+            "nom_OPT"=>"string",
+            "prenom_OPT"=>"string",
+            "pseudo_OPT"=>"string",
+        ];
+        ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
+
+        if ($error !== "") {
+            return $this->sendError($error,$error);
+        }
+        [
+            "error" => $error,
+            "errorDebug"=> $errorDebug,
+            "user"=> $user,
+        ] = $userService->adminEdit($parameters,$jwt,$id);
+        return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
+    }
+
+    /**
+     * @return void
+     */
+    public function getAllUser(Request $request,UserService $userService):JsonResponse
+    {
+        $errorDebug = "";
+        $jwt = $this->getJwt($request);
+        [
+            "error"=>$error,
+            "errorDebug"=>$errorDebug,
+            "users"=>$users,
+        ] = $userService->getAllUser($jwt);
+        if($errorDebug !== "")
+        {
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("recover users success",$users,response::HTTP_CREATED);
+    }
 }

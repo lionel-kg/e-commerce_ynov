@@ -75,6 +75,31 @@ class Section extends SectionTool
     }
 
     /**
+     * @param int $id
+     * @return array
+     */
+    public function findSectionById(int $id) {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","section"=>[],"produits"=>[]];
+        try{
+            $section = $this->findById($id);
+            if ($section === null) {
+                $response["error"] = "Aucune section trouvé";
+            }
+            $produits = $section->getProduits();
+            $response["section"] = $section;
+            $response["produits"] = $produits;
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s", $e->getMessage());
+        }
+        if ($errorDebug !== "") {
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "erreur lors de la récuperation de la categorie";
+        }
+        return $response;
+    }
+
+    /**
      * @return array
      */
     public function getSections():array

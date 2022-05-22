@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Controller\CustomAbstractController;
 use App\Service\Categorie as CategorieService;
 use App\Service\Produit as ProduitService;
+use App\Service\Section as SectionService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -128,11 +129,11 @@ class ProduitController extends CustomAbstractController
      * @param CategorieService $categorieService
      * @return JsonResponse
      */
-    public function getProductFromCategorie(Request $request,ProduitService $produitService,CategorieService $categorieService){
+    public function getProductFromCategorie(Request $request,ProduitService $produitService,CategorieService $categorieService, SectionService $sectionService ){
         $errorDebug = "";
         $parameters = $this->getParameters($request);
         try {
-            ["error"=>$error,"errorDebug"=>$errorDebug,"produits"=>$produits] = $produitService->getProduitFromCategorie($parameters,$categorieService);
+            ["error"=>$error,"errorDebug"=>$errorDebug,"produits"=>$produits] = $produitService->getProduitFromCategorie($parameters,$categorieService,$sectionService);
         } catch (\Exception $e) {
             $errorDebug = sprintf("Exception : %s",$e->getMessage());
         }

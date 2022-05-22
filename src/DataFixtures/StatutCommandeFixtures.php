@@ -10,7 +10,7 @@ class StatutCommandeFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        /*$statutsCommande = [
+        $statutsCommande = [
             1 => "En attente de paiement",
             2 => "Payée",
             3 => "En préparation",
@@ -25,6 +25,6 @@ class StatutCommandeFixtures extends Fixture
             $manager->persist($statutCommande);
         }
 
-        $manager->flush();*/
+        $manager->flush();
     }
 }

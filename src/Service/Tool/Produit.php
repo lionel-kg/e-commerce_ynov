@@ -3,6 +3,7 @@
 namespace App\Service\Tool;
 
 use App\Entity\Produit as ProduitEntity;
+use App\Entity\Section as SectionEntity;
 use App\Service\CustomAbstractService;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -52,6 +53,15 @@ class Produit extends CustomAbstractService
     public function findFromFilter(array $filter,array $orderBy = ["prix" => 'ASC']):array
     {
         return $this->em->getRepository(ProduitEntity::class)->findBy($filter,$orderBy);
+    }
+
+    /**
+     * @param SectionEntity $section
+     * @return array
+     */
+    public function findFromSection(SectionEntity $section):array
+    {
+        return $this->em->getRepository(ProduitEntity::class)->findFromSection($section);
     }
 
     /**
