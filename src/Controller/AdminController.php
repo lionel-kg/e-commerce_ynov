@@ -78,22 +78,19 @@ class AdminController extends CustomAbstractController
     }
 
     /**
-     * @Route("/edit/{id}",methods={"POST"},name="_user_edit")
+     * @Route("/active/{id}",methods={"POST"},name="_user_edit")
      * @param Request $request
      * @param UserService $userService
      * @param string $id
      * @return JsonResponse
      * @throws \JsonException
      */
-    public function AdminEdit(Request $request,UserService $userService,string $id){
+    public function adminActiveUser(Request $request,UserService $userService,string $id){
         $errorDebug = "";
         $parameters = $this->getParameters($request);
         $jwt = $this->getJwt($request);
         $waitedParameters = [
-            "email_OPT" => "string",
-            "nom_OPT"=>"string",
-            "prenom_OPT"=>"string",
-            "pseudo_OPT"=>"string",
+            "active_OPT" => "int",
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
 
@@ -104,7 +101,7 @@ class AdminController extends CustomAbstractController
             "error" => $error,
             "errorDebug"=> $errorDebug,
             "user"=> $user,
-        ] = $userService->adminEdit($parameters,$jwt,$id);
+        ] = $userService->adminActiveUser($newParameters,$jwt,$id);
         return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
     }
 

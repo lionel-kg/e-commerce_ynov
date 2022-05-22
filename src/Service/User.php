@@ -110,7 +110,7 @@ class User extends UserServiceTool
      * @return array
      * @throws \JsonException
      */
-    public function adminEdit(array $parameter,string $jwt,int $id): array
+    public function adminActiveUser(array $parameter,string $jwt,int $id): array
     {
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","user"=>[]];
@@ -122,21 +122,9 @@ class User extends UserServiceTool
         try{
             if($isAdmin === true ) {
                 $user = $this->getUserById($id);
-                if(isset($parameter["role"])){
-                    if(!in_array($parameter["role"],$admin->getRoles(),true)){
-                        $user->setRoles([$parameter["role"]]);
-                    }
+                if(isset($parameter["active"])){
+                    $user->setActive($parameter["active"]);
                 }
-                if(isset($parameter["nom"]) && $parameter["nom"] === ""){
-                    $parameter["nom"] = $user->getNom();
-                }
-                if(isset($parameter["prenom"]) && $parameter["prenom"] === ""){
-                    $parameter["prenom"] = $user->getPrenom();
-                }
-                if(isset($parameter["pseudo"]) && $parameter["pseudo"] === ""){
-                    $parameter["pseudo"] = $user->getPseudo();
-                }
-                $user = $this->editEntity($parameter,$user);
                 $this->em->persist($user);
                 $this->em->flush();
             } else {

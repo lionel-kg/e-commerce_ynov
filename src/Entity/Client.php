@@ -22,6 +22,12 @@ class Client extends User
      */
     private $commandes;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     * @Groups({"user_info"})
+     */
+    private $active;
+
     public function __construct()
     {
         parent::__construct();
@@ -81,6 +87,18 @@ class Client extends User
                 $commande->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(?bool $active): self
+    {
+        $this->active = $active;
 
         return $this;
     }
