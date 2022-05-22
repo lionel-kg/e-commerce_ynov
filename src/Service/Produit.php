@@ -72,7 +72,7 @@ class Produit extends ProduitServiceTool
     /**
      * @throws \JsonException
      */
-    public function edit(array $parameters, string $jwt,string $id):array
+    public function edit(array $parameters, string $jwt,string $id,SectionService $sectionService, CategorieService $categorieService):array
     {
         $errorDebug = "";
         $response = ["error"=>"","errorDebug"=>"","produit"=>[]];
@@ -84,12 +84,14 @@ class Produit extends ProduitServiceTool
             if($isAdmin === true){
                 if(isset($parameters["categorie"]) && $parameters["categorie"] === "")
                 {
-                $parameters["categorie"] = $produit->getCategorie();
+                    $parameters["categorie"] = $produit->getCategorie();
+                    $categorie = $categorieService->findById($parameters["categorie"]);
+                    $produit->setCategorie($categorie);
+                } else {
+                    $categorie = $categorieService->findById($parameters["categorie"]);
+                    $produit->setCategorie($categorie);
                 }
-                if(isset($parameters["section"]) && $parameters["section"] === "")
-                {
-                    $parameters["section"] = $produit->getSection();
-                }
+
                 if(isset($parameters["nom"]) && $parameters["nom"] === "")
                 {
                     $parameters["nom"] = $produit->getNom();
@@ -103,7 +105,6 @@ class Produit extends ProduitServiceTool
                     $parameters["prix"] = $produit->getPrix();
                 }
                 $produit = $this->editEntity($parameters,$produit);
-
                 $this->em->persist($produit);
                 $this->em->flush();
                 $response["produit"] = $produit;

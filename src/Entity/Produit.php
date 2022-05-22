@@ -46,7 +46,7 @@ class Produit
     private $ligneCommandes;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="produits")
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="produits" ,onDelete="CASCADE")
      */
     private $categorie;
 
@@ -57,7 +57,7 @@ class Produit
     private $stockTailles;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Section::class, inversedBy="produits")
+     * @ORM\ManyToMany(targetEntity=Section::class, inversedBy="produits",cascade={"remove"})
      */
     private $Section;
 

@@ -54,9 +54,8 @@ class ProduitFixtures extends Fixture
                             $article->setPrix($ar['prix_u']);
                             $article->setImage($ar['image']);
                             foreach($sections as $sec){
-                                if($sec->getLibelle() === $ar["sections"][0])
-                                    $article->addSection($sec);
-                                }
+                                $article->addSection($sec);
+                            }
                             foreach($ar['tailles'] as $tai){
                                 foreach($tailles as $tail){
                                     if($tai === $tail->getLibelle()){

@@ -88,6 +88,7 @@ class Produit extends CustomAbstractService
             "image",
             "nom",
             "prix",
+            "couleur",
         ];
         return $this->editSimpleEntity($produit,$field,$userParameters);
     }

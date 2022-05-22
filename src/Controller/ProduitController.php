@@ -53,22 +53,24 @@ class ProduitController extends CustomAbstractController
      * @param Request $request
      * @param ProduitService $produitService
      * @return JsonResponse
+     * @throws \JsonException
      */
-    public function edit(Request $request,ProduitService $produitService,int $id):JsonResponse
+    public function edit(Request $request,ProduitService $produitService,int $id,SectionService $sectionService, CategorieService $categorieService):JsonResponse
     {
         $errorDebug = "";
         $parameters = $this->getParameters($request);
         $jwt = $this->getJwt($request);
         $waitedParameters = [
-            "nom"=>"string",
-            "image"=>"string",
-            "prix"=>"integer",
+            "nom_OPT"=>"string",
+            "image_OPT"=>"string",
+            "couleur"=>"string",
+            "prix_OPT"=>"integer",
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){
             return $this->sendError($error,$error);
         }
-        ["error"=>$error,"errorDebug"=>$errorDebug,"produit"=>$produit] = $produitService->edit($parameters,$jwt,$id);
+        ["error"=>$error,"errorDebug"=>$errorDebug,"produit"=>$produit] = $produitService->edit($parameters,$jwt,$id,$sectionService,$categorieService);
         if($errorDebug !== ""){
             return $this->sendError($error,$errorDebug);
         }
@@ -161,5 +163,34 @@ class ProduitController extends CustomAbstractController
             return $this->sendError($error,$errorDebug);
         }
         return $this->sendSuccess("Recover product success",$produits,response::HTTP_ACCEPTED);
+    }
+
+    /**
+     * @Route("/edit/{id}", methods={"POST"},name="_edit")
+     * @param Request $request
+     * @param ProduitService $produitService
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function remove(Request $request,ProduitService $produitService,int $id,SectionService $sectionService, CategorieService $categorieService):JsonResponse
+    {
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        $jwt = $this->getJwt($request);
+        $waitedParameters = [
+            "nom_OPT"=>"string",
+            "image_OPT"=>"string",
+            "couleur"=>"string",
+            "prix_OPT"=>"integer",
+        ];
+        ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
+        if($error !== ""){
+            return $this->sendError($error,$error);
+        }
+        ["error"=>$error,"errorDebug"=>$errorDebug,"produit"=>$produit] = $produitService->edit($parameters,$jwt,$id,$sectionService,$categorieService);
+        if($errorDebug !== ""){
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("Product edit success",$produit);
     }
 }
