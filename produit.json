@@ -2,7 +2,7 @@
   "articles": [
     {
       "libelle": "Butterfly Shirt Kids",
-      "description": "A really cute shirt, that your child would absolutely love",
+      "description": "A really cute shirt, that you child would absolutely love.",
       "prix_u": 19.95,
       "image": "https://i.pinimg.com/564x/56/84/e3/5684e36c6c607a81f2df965b658ca033.jpg",
       "sections": [
@@ -20,7 +20,7 @@
     },
     {
       "libelle": "Brown Pull Kids",
-      "description": "A really cute shirt, that your child would absolutely love",
+      "description": "A really cute shirt, that you child would absolutely love.",
       "prix_u": 24.95,
       "image": "https://i.pinimg.com/564x/14/8e/d5/148ed59cb3b8a7c08c870ea90a00f548.jpg",
       "sections": [
@@ -28,7 +28,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "marron",
+      "couleur": "brown",
 
 "tailles": [
         "S",
@@ -39,15 +39,15 @@
     },
     {
       "libelle": "Optimistic Shirt  Kids",
-      "description": "A really cute shirt, that your child would absolutely love",
+      "description": "A really cute shirt, that you child would absolutely love.",
       "prix_u": 14.95,
-      "image": "https://i.pinimg.com/564x/14/8e/d5/148ed59cb3b8a7c08c870ea90a00f548.jpg",
+      "image": "https://i.pinimg.com/564x/1f/f4/c6/1ff4c694dc61f322a788b284dd1c4df9.jpg",
       "sections": [
         "enfant"
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "S",
         "M",
@@ -57,7 +57,7 @@
     },
     {
       "libelle": "Happy Mind Shirt Kids",
-      "description": "A really cute shirt, that your child would absolutely love",
+      "description": "A really cute shirt, that you child would absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/55/ab/d2/55abd2cf2d813d65dc50739e9b4c5a5d.jpg",
       "sections": [
@@ -65,7 +65,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "bleu",
+      "couleur": "blue",
 "tailles": [
         "S",
         "M",
@@ -75,7 +75,7 @@
     },
     {
       "libelle": "Heart Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 9.95,
       "image": "https://i.pinimg.com/564x/61/fa/7d/61fa7d831e03ccbc40e605c4d22f9291.jpg",
       "sections": [
@@ -83,7 +83,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "noir",
+      "couleur": "black",
 "tailles": [
         "S",
         "M",
@@ -92,8 +92,8 @@
       ]
     },
     {
-      "libelle": "Rose Black Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "libelle": "pink Black Shirt Men",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 9.95,
       "image": "https://i.pinimg.com/564x/c2/bf/88/c2bf88f799e70c153a0ec1d771daeb96.jpg",
       "sections": [
@@ -101,7 +101,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "bleu",
+      "couleur": "blue",
 "tailles": [
         "S",
         "M",
@@ -111,7 +111,7 @@
     },
     {
       "libelle": "Panda Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 9.95,
       "image": "https://i.pinimg.com/564x/6f/08/b4/6f08b4bf08dfadb996d877017cc3b671.jpg",
       "sections": [
@@ -119,7 +119,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "S",
         "M",
@@ -128,8 +128,8 @@
       ]
     },
     {
-      "libelle": "Rose Purple Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "libelle": "pink Purple Shirt Men",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/1c/ef/25/1cef258bc2d09265741ba37d8c6652f6.jpg",
       "sections": [
@@ -137,7 +137,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "violet",
+      "couleur": "purple",
 "tailles": [
         "S",
         "M",
@@ -147,7 +147,7 @@
     },
     {
       "libelle": "Stripe Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 19.95,
       "image": "https://i.pinimg.com/564x/c3/8f/a4/c38fa451cb825441fa9b627e3535993a.jpg",
       "sections": [
@@ -155,7 +155,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "rose",
+      "couleur": "pink",
 "tailles": [
         "S",
         "M",
@@ -165,7 +165,7 @@
     },
     {
       "libelle": "Hands Shirt Men",
-      "description": "A really cool shirt, that your will absolutely love",
+      "description": "A really cool shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/70/e5/f3/70e5f3d2071d7e54935da2622e8473d3.jpg",
       "sections": [
@@ -183,7 +183,7 @@
     },
     {
       "libelle": "Butterfly Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/ba/37/2d/ba372d3a6bb002a0d10d9b8c63ae0752.jpg",
       "sections": [
@@ -191,7 +191,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "bleu",
+      "couleur": "blue",
 "tailles": [
         "S",
         "M",
@@ -201,7 +201,7 @@
     },
     {
       "libelle": "Flower Power Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/54/11/22/541122af648b1153956cd43b8a76a54e.jpg",
       "sections": [
@@ -209,7 +209,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "S",
         "M",
@@ -219,7 +219,7 @@
     },
     {
       "libelle": "Flower Power Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/ef/b0/13/efb0135bb7a8aadc54d6018dbe5f85e6.jpg",
       "sections": [
@@ -227,7 +227,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "rose",
+      "couleur": "pink",
 "tailles": [
         "S",
         "M",
@@ -237,7 +237,7 @@
     },
     {
       "libelle": "Heart Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 14.95,
       "image": "https://i.pinimg.com/564x/66/4b/18/664b18a1c5401a5a823b7243fc6a0ee4.jpg",
       "sections": [
@@ -245,7 +245,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "violet",
+      "couleur": "purple",
 "tailles": [
         "S",
         "M",
@@ -255,7 +255,7 @@
     },
     {
       "libelle": "Flower Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 9.95,
       "image": "https://i.pinimg.com/564x/00/4a/8e/004a8e0c9bf9e1f350c7bc2ecd161161.jpg",
       "sections": [
@@ -263,7 +263,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "rouge",
+      "couleur": "red",
 "tailles": [
         "S",
         "M",
@@ -273,7 +273,7 @@
     },
     {
       "libelle": "Hearts Shirt Women",
-      "description": "A really cute shirt, that your will absolutely love",
+      "description": "A really cute shirt, that you will absolutely love.",
       "prix_u": 9.95,
       "image": "https://i.pinimg.com/564x/a3/2b/df/a32bdf2495fef364bec7bad9b5e83594.jpg",
       "sections": [
@@ -281,7 +281,7 @@
       ],
       "categorie": "t-shirt",
       "type-article": "t-shirt",
-      "couleur": "blanc",
+      "couleur": "white",
 "tailles": [
         "S",
         "M",
@@ -289,72 +289,19 @@
         "XL"
       ]
     },
+
     {
-      "libelle": "Nike Sportswear JDI",
-      "description": "Le tee-shirt Nike Sportswear JDI est confectionné en coton doux et présente un logo JDI classique sur la poitrine.",
-      "prix_u": 29.95,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/7a5deae8-7208-44ba-94e6-01f74793d174/tee-shirt-imprime-floral-sportswear-jdi-pour-gDwlms.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Jordan x Paris Saint-Germain 2019/20 Stadium Fourth",
-      "description": "Le maillot Jordan x Paris Saint-Germain Stadium Fourth présente des détails caractéristiques de l’équipe sur un tissu ultra-respirant pour vous permettre de rester au sec et de bénéficier d’un maximum de fraîcheur sur le terrain comme dans les tribunes.",
-      "prix_u": 90.00,
-      "image": "https://render.nikeid.com/ir/render/nikeidrender/PSG_MENS_4S_2001_v1?obj=/s/g1/shirt&show&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB&wid=1024",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "LeBron James Lakers Icon Edition",
-      "description": "Inspiré du maillot que portent les joueurs sur le terrain, le maillot connecté Nike NBA Lebron James Icon Edition Swingman (Los Angeles Lakers) pour Homme vous permet de représenter votre équipe tout en bénéficiant d'une fraîcheur optimale et d'un maximum de confort dans tous vos mouvements.",
-      "prix_u": 90.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/itnv111xvxauescfokoj/maillot-dequipe-nba-swingman-lebron-james-lakers-icon-edition-hH6KpH.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Jordan x Paris Saint-Germain 2019/20 Stadium Fourth",
-      "description": "Le maillot Jordan x Paris Saint-Germain Stadium Fourth présente des détails caractéristiques de l’équipe sur un tissu ultra-respirant pour vous permettre de rester au sec et de bénéficier d’un maximum de fraîcheur sur le terrain comme dans les tribunes.",
-      "prix_u": 90.00,
-      "image": "https://render.nikeid.com/ir/render/nikeidrender/PSG_WMNS_4S_2001_v1?obj=/s/g1/shirt&show&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB&wid=1024",
+      "libelle": "Dog Hat Women",
+      "description": "A really cute hat, that you will absolutely love.",
+      "prix_u": 69.95,
+      "image": "https://i.pinimg.com/564x/e0/52/61/e052618aff7f9b1f94e34758a420f420.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "white",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -362,17 +309,17 @@
       ]
     },
     {
-      "libelle": "Nike Pro AeroAdapt",
-      "description": "Le haut Nike Pro AeroAdapt vous offre une coupe courte confectionnée dans un tissu léger qui respire lorsque vous commencez à transpirer. Les fentes dans le dos vous permettent de bénéficier d'un maximum de fraîcheur et de confort lors des activités intenses.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1166435b-1b15-4f5d-9bf5-0d3536f64448/haut-court-pro-aeroadapt-pour-Qn02Dc.jpg",
+      "libelle": "Bob Hat Women",
+      "description": "A really cute hat, that you will absolutely love.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/33/73/ce/3373ce36d019cf9d74ab02c19857d590.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "pink",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -380,128 +327,126 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear Icon Clash",
-      "description": "Le haut Nike Sportswear Icon Clash vous assure un confort classique puissance 2, avec un effet superposé. Il présente des motifs audacieux et une conception coupée-cousue pour un look fait main unique.",
-      "prix_u": 40.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-93ae80c5-45a6-4d30-801d-c76d85a9c2b8/haut-a-manches-courtes-sportswear-icon-clash-pour-nW7WZq.jpg",
+      "libelle": "Winter Cap Women",
+      "description": "A really cute hat, that you will absolutely love.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/d9/bd/a2/d9bda216d7b56e440b6b7e9cd16651fa.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "red",
+      "tailles": [
         "S",
         "M",
         "L",
         "XL"
       ]
     },
-    { "libelle": "Nike Sportswear",
-      "description": "Ce tee-shirt Nike Sportswear vous donne envie de sortir et de pratiquer votre sport, quel que soit le temps. Enfilez-le et c'est parti !",
-      "prix_u": 25.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/g6sgbz18wqeuemwqrrc1/tee-shirt-sportswear-pour-plus-age-FbFDsz.jpg",
+    {
+      "libelle": "Red Gavroche Women",
+      "description": "A really cute hat, that you will absolutely love.",
+      "prix_u": 11.95,
+      "image": "https://i.pinimg.com/564x/a8/59/6d/a8596db2d2d1f170ec5982b9b0ddf084.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "red",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Bob Hat Men",
+      "description": "A really cool hat, that you will absolutely love.",
+      "prix_u": 11.95,
+      "image": "https://i.pinimg.com/564x/ca/6c/9a/ca6c9a59856241ccf3c01b632dbb8e58.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+
+    {
+      "libelle": "Choker Men",
+      "description": "A really cool choker, that you will absolutely love.",
+      "prix_u": 5.45,
+      "image": "https://i.pinimg.com/564x/83/fd/bd/83fdbd87ada285525cb11b236dd5b99f.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "black",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Gavroche Hat Men",
+      "description": "A really cool hat, that you will absolutely love.",
+      "prix_u": 9.85,
+      "image": "https://i.pinimg.com/564x/25/58/6a/25586af4b46b02b08cd156ec76e2e4c8.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "brown",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Yoshi Hat Men",
+      "description": "A really cool yoshi, that you will absolutely love.",
+      "prix_u": 39.95,
+      "image": "https://i.pinimg.com/564x/fc/24/8c/fc248c026cb9ad61dbcf495e6ee378e5.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "green",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Chikorita Hat Kids",
+      "description": "A really cool chikorita !! Best companion ever, your child will absolutely love chikorita.",
+      "prix_u": 139.95,
+      "image": "https://i.pinimg.com/564x/5d/86/8e/5d868e90da0fa4fdcb09e98decda43fc.jpg",
       "sections": [
         "enfant"
       ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    { "libelle": "Nike Sportswear",
-      "description": "Unique en son genre, le tee-shirt Nike Sportswear arbore un imprimé éclaboussures détonant pour apporter une touche d'originalité à votre style du quotidien.",
-      "prix_u": 19.95,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b04073f7-c742-4694-b95c-9cf4f38041df/tee-shirt-imprime-sportswear-pour-plus-age-hBLvCX.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    { "libelle": "Nike Sportswear",
-      "description": "Le tee-shirt Nike Sportswear est fabriqué en coton doux pour un grand confort au quotidien.",
-      "prix_u": 19.95,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-cc3eb4ce-8c44-4f7e-8f73-9dfdade342f4/tee-shirt-sportswear-pour-plus-age-DCXDs8.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    { "libelle": "Nike 50",
-      "description": "Le haut Nike 50 offre le confort et la douceur du coton biologique pour un look confortable qui prend soin de notre planète.",
-      "prix_u": 45.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/297af57d-47df-4338-bfae-912ff33b9d41/haut-a-manches-courtes-50-F1mSdP.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    { "libelle": "The Nike Polo",
-      "description": "Conçu pour apporter une touche de luxe, The Nike Polo est confectionné dans un tissu piqué haut de gamme et présente le style classique d'un vêtement en coton. Mais ne vous fiez pas aux apparences. Sa conception respirante et sa technologie Dri-FIT assurent la tenue et le confort de votre haut de fitness préféré, ce qui rend cet indispensable urbain idéal pour le parcours ou le terrain.",
-      "prix_u": 60.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/zfl25qqiguve5h2unm9v/polo-coupe-pres-du-corps-polo-mixte-zKcdQK.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    { "libelle": "Ben Simmons 76ers Classic Edition",
-      "description": "Le modèle Classic Edition puise dans le riche héritage de la ligue pour faire revivre les souvenirs inoubliables d'une époque dorée. Inspiré par un design rétro des Sixers datant des annéees 70, le maillot Nike NBA Philadelphia 76ers Classic Edition Swingman présente une conception classique en tissu à double maille premium et une coupe élégante sous tous les angles.",
-      "prix_u": 100.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/wvl4wtlp5xsirbcyc0sp/maillot-nba-swingman-ben-simmons-76ers-classic-edition-fZZ1hT.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "t-shirt",
-      "couleur": "vert",
-"tailles": [
-        "XS",
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "green",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -509,17 +454,143 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear",
-      "description": "Confectionné dans un tissu en molleton léger orné de teintes printanières, le haut Nike Sportswear offre un maxmum de confort en cas de météo imprévisible. Le Swoosh métallisé sur la poitrine apporte une touche de brillance.",
-      "prix_u": 50.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-cdd28e96-039d-4ee0-a7b6-c46d12aa4140/haut-a-swoosh-sportswear-pour-NmrJl3.jpg",
+      "libelle": "Seal Hat Kids",
+      "description": "A really cute hat ! Your child will absolutely love it.",
+      "prix_u": 24.95,
+      "image": "https://i.pinimg.com/564x/e4/a4/9d/e4a49d842ec59c8a302edc9b8cd674ae.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "white",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Ribbon Kids",
+      "description": "A really cute ribbon ! Your child will absolutely love it.",
+      "prix_u": 4.95,
+      "image": "https://i.pinimg.com/564x/ff/a4/6f/ffa46fc097a17c0bee5aa760b7a71b55.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Flower Bob Hat Kids",
+      "description": "A really cute bob ! Your child will absolutely love it.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/d4/80/54/d4805484893ba1aca3a4632afa2d3948.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "accessoire",
+      "type-article": "accessoire",
+      "couleur": "white",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Cat Sweater Kids",
+      "description": "A really nice sweater ! Your child will absolutely love it.",
+      "prix_u": 24.95,
+      "image": "https://i.pinimg.com/564x/6e/15/e8/6e15e8f03af365bb8252ccc6503bcb00.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "pink",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Dinosaur Sweater Kids",
+      "description": "A really nice sweater ! Your child will absolutely love it.",
+      "prix_u": 24.95,
+      "image": "https://i.pinimg.com/564x/49/73/10/497310f72812257ac85984ff4a17e330.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "pink",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Panda Sweater Kids",
+      "description": "A really nice sweater ! Your child will absolutely love it.",
+      "prix_u": 21.95,
+      "image": "https://i.pinimg.com/564x/79/f8/7f/79f87f0d0e4b5c706e0f6221d9d178cd.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Hamster Sweater Kids",
+      "description": "A really nice sweater ! Your child will absolutely love it.",
+      "prix_u": 27.95,
+      "image": "https://i.pinimg.com/564x/1e/01/fe/1e01fea714becb8733ef69dfdffff89c.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Sweater Men",
+      "description": "A really cool sweater ! You will absolutely love it.",
+      "prix_u": 34.95,
+      "image": "https://i.pinimg.com/564x/92/e5/fc/92e5fc537ebb54d8a06610d042100755.jpg",
       "sections": [
         "homme"
       ],
-      "categorie": "vetement",
+      "categorie": "pull",
       "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "pink",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -527,17 +598,17 @@
       ]
     },
     {
-      "libelle": "Nike Spotlight",
-      "description": "Ni trop lourd, ni trop léger, le sweat à capuche Nike Spotlight vous offre la protection rapide et facile à porter d'un sweat à zip avec des propriétés anti-transpiration.",
-      "prix_u": 70.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2a49cea5-1e09-4a47-b994-f9ab25e146d6/sweat-a-capuche-de-basketball-spotlight-pour-t8fKBW.jpg",
+      "libelle": "Frog Sweater Men",
+      "description": "A really cool sweater ! You will absolutely love it.",
+      "prix_u": 34.95,
+      "image": "https://i.pinimg.com/564x/72/16/ba/7216ba4925d7a98d8963b0a99ff9ff2d.jpg",
       "sections": [
         "homme"
       ],
-      "categorie": "vetement",
+      "categorie": "pull",
       "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "green",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -545,17 +616,53 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear",
-      "description": "Le haut Nike Sportswear apporte une touche de fantaisie à une silhouette classique. Avec une coupe revisitée et un imprimé sur toute la surface qui semble dessiné à la main, il offre un look audacieux et personnalisé.",
-      "prix_u": 55.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dvu8lvaohv1ffcv7pdbf/haut-en-tissu-fleece-sportswear-pour-VkXKgm.jpg",
+      "libelle": "Dinosaurs Sweater Men",
+      "description": "A really cool sweater ! You will absolutely love it.",
+      "prix_u": 32.95,
+      "image": "https://i.pinimg.com/564x/77/d0/7d/77d07d0487b8d33cd0f0abc8f1d8ef06.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "white",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Dinosaur Sweater Men",
+      "description": "A really cool sweater ! You will absolutely love it.",
+      "prix_u": 33.95,
+      "image": "https://i.pinimg.com/564x/37/9f/1d/379f1d5a35b0a04063ccb351193d40d7.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Cherry Baby Sweater Women",
+      "description": "A really cute sweater ! You will absolutely love it.",
+      "prix_u": 33.95,
+      "image": "https://i.pinimg.com/564x/82/00/fa/8200faf9a1c8042d5d90a007cbb998d5.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
+      "categorie": "pull",
       "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -563,109 +670,71 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear Club Fleece",
-      "description": "Le sweat à capuche FC Barcelona Tech Fleece Essentials est confectionné dans un tissu à trois couches qui offre une isolation légère pour lui permettre de rester au chaud, que ce soit sur le banc de touche ou au quotidien.",
-      "prix_u": 90.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ol8rxicknevj9fckrepo/sweat-a-capuche-a-zip-fc-barcelona-tech-fleece-essentials-pour-plus-age-km333s.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "FC Barcelona Tech Fleece Essentials",
-      "description": "Le sweat à capuche Nike Sportswear Club Fleece lui procure un maximum de douceur et de confort pour le garder au chaud en toute circonstance.",
-      "prix_u": 40.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f7b8874b-5999-4868-80cd-373f783d9ea5/sweat-a-capuche-sportswear-club-fleece-pour-plus-age-2QM3wV.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Air",
-      "description": "Présentant une coupe décontractée, le sweat à capuche Nike Air est confectionné dans un tissu Fleece doux qui vous offre une sensation de douceur sans sacrifier l'élégance. Le logo Nike Air brodé sur la poitrine affiche votre passion pour Nike Air.",
-      "prix_u": 55.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/qtpoulxhkzatw42vudb0/sweat-a-capuche-a-zip-air-pour-plus-age-LTK19D.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear JDI",
-      "description": "Le haut Nike Sportswear JDI associe un tissu léger en maille et un imprimé inspiré de la nature, pour un confort optimal au quotidien et un style printanier.",
-      "prix_u": 85.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-4759c568-f3be-4460-ac4a-2c245c73e412/haut-a-motif-floral-sportswear-jdi-6nSb8s.jpg",
-      "sections": [
-        "femme",
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike SB",
-      "description": "À la fois doux et chaud, le sweat à capuche Nike SB vous offre un maximum de chaleur dans un tissu Fleece brossé. Des empiècements sous chaque bras vous procurent une plus grande liberté de mouvement lors de sauts aériens et de tricks endiablés.",
-      "prix_u": 70.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/soh5xbq0wmcvswmtraph/sweat-de-skateboard-a-capuche-et-motif-sb-nbSWxT.jpg",
-      "sections": [
-        "femme",
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pull",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "NikeCourt Dri-FIT",
-      "description": "Avec sa taille extensible et son tissu anti-transpiration, la jupe NikeCourt Dri-FIT est idéale pour les matchs intenses. Le short intérieur apporte plus de protection lorsque vous bougez.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/s97oyjzji6meutancynv/jupe-de-tennis-nikecourt-dri-fit-pour-kZ9pH8.jpg",
+      "libelle": "Flowers Sweater Women",
+      "description": "A really cute sweater ! You will absolutely love it.",
+      "prix_u": 27.95,
+      "image": "https://i.pinimg.com/564x/86/72/4e/86724e252db1c143334eb66eab0f8daf.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "purple",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Mushrooms Sweater Women",
+      "description": "A really cute sweater ! You will absolutely love it.",
+      "prix_u": 24.95,
+      "image": "https://i.pinimg.com/564x/33/dd/fb/33ddfbd3fd2e66662a650141d7703bdc.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "green",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Melting Smiles Sweater Women",
+      "description": "A really cute sweater ! You will absolutely love it.",
+      "prix_u": 22.95,
+      "image": "https://i.pinimg.com/564x/0f/09/47/0f0947ef9529be7568b407acb63a996e.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "pull",
+      "type-article": "pull",
+      "couleur": "purple",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Spring Skirt Women",
+      "description": "A really cute skirt ! You will absolutely love it.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/36/d5/6e/36d56ee3739732c005dabeac58cf79d7.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "jupe",
       "type-article": "jupe",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "green",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -673,17 +742,17 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear NSW",
-      "description": "La jupe en tissu Fleece Nike Sportswear NSW associe style sportif et look streetwear avec une silhouette surdimensionnée, des détails démesurés et des couleurs saisissantes.",
-      "prix_u": 70.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-a8b002b1-4c93-414f-8ab3-189fb6c3b3b6/jupe-en-tissu-fleece-sportswear-nsw-pour-1jBLtn.jpg",
+      "libelle": "Spring Skirt Women",
+      "description": "A really cute skirt ! You will absolutely love it.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/39/f0/4c/39f04c22f426b7d08714bedaa5e64c5f.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
+      "categorie": "jupe",
       "type-article": "jupe",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "brown",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -691,17 +760,17 @@
       ]
     },
     {
-      "libelle": "NikeCourt Dri-FIT",
-      "description": "Axée sur le mouvement, la jupe NikeCourt Dri-FIT est votre alliée idéale pour les entraînements ou les matchs. Elle associe une technologie anti-transpiration à un tissu côtelé et une taille plate, pour un style tendance.",
-      "prix_u": 45.00,
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/mtogzde6n14imoisay7d/jupe-de-tennis-nikecourt-dri-fit-pour-nkHrCz.jpg",
+      "libelle": "Spring Skirt Women",
+      "description": "A really cute skirt ! You will absolutely love it.",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/17/96/e2/1796e26d81af67e4180e999f7cc7b6bd.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
+      "categorie": "jupe",
       "type-article": "jupe",
-      "couleur": "vert",
-"tailles": [
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -709,71 +778,17 @@
       ]
     },
     {
-      "libelle": "Paris Saint-Germain",
-      "description": "Le pantalon Paris Saint-Germain est confectionné dans un tissu en molleton légèrement brossé et offre un confort optimal dans un look décontracté. Les détails premium évoquent la collaboration entre la marque Jordan et le club de football français.",
-      "prix_u": 90.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da29bfd5-3b28-4796-961e-8fb0e541a88f/pantalon-en-tissu-fleece-paris-saint-germain-H4Zkpb.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Dri-FIT Academy",
-      "description": "Le pantalon Nike Dri-FIT Academy est confectionné dans un tissu extensible et anti-transpiration pour une liberté de mouvement optimale sur le terrain. Les zips en bas des jambes permettent de vous changer facilement sans avoir à enlever vos chaussures. Les poches latérales à zip permettent de ranger vos petits objets.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d0de2309-c7ae-4776-873a-0ea351539c26/pantalon-de-football-dri-fit-academy-pour-JwfJlq.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear Club Fleece",
-      "description": "Confectionné dans un tissu Fleece doux et confortable, le pantalon de jogging en Fleece Nike Sportswear Club est un incontournable qui vous confère un style classique tout en vous offrant un look élégant réellement taillé pour le quotidien.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/wwys3k1fn9bdavvzh2pi/pantalon-de-jogging-sportswear-club-fleece-pour-phSWZS.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear",
-      "description": "Confectionné dans un tissu en molleton léger orné de teintes printanières, le pantalon Nike Sportswear offre un maximum de confort en cas de météo imprévisible. Le Swoosh métallisé sur la jambe gauche apporte une touche de brillance.",
-      "prix_u": 50.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-3bd0bcde-aaeb-48c0-a913-5e6e20c3c112/pantalon-sportswear-pour-hSXfF2.jpg",
+      "libelle": "Spring Short Women",
+      "description": "A really cute short ! You will absolutely love it.",
+      "prix_u": 17.65,
+      "image": "https://i.pinimg.com/564x/97/f0/32/97f032bd7e5b93634ca08213ee532625.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "brown",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -781,17 +796,17 @@
       ]
     },
     {
-      "libelle": "Nike Epic Lux",
-      "description": "Le legging Nike Epic Lux propose une silhouette de running revisitée pour un confort sans fin. Son tissu extensible procure une sensation de douceur et de maintien, tandis que sa taille mi-basse assure une protection maximale lors de vos runs les plus intenses.",
-      "prix_u": 115.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5b87c81-d7b1-4fa8-bbaa-da5a66ed227a/legging-de-running-epic-lux-pour-vPqqCG.jpg",
+      "libelle": "Spring Short Women",
+      "description": "A really cute short ! You will absolutely love it.",
+      "prix_u": 17.65,
+      "image": "https://i.pinimg.com/564x/4b/6b/a4/4b6ba465c816bd66c318415419f81500.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -799,17 +814,17 @@
       ]
     },
     {
-      "libelle": "Nike Dri-FIT Academy Pro",
-      "description": "Le pantalon Nike Dri-FIT Academy Pro est fabriqué dans un tissu anti-transpiration souple pour vous permettre de rester au sec et d'évoluer rapidement sur le terrain.",
-      "prix_u": 45.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f43878fd-ddfe-4727-ab3a-7b3c7ed1b5a5/pantalon-de-football-dri-fit-academy-pro-pour-bsRBkL.jpg",
+      "libelle": "Spring Short Women",
+      "description": "A really cute short ! You will absolutely love it.",
+      "prix_u": 17.65,
+      "image": "https://i.pinimg.com/564x/8f/4b/32/8f4b3228fffbb5a3ef7aa7ef375dd67e.jpg",
       "sections": [
         "femme"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "black",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -817,17 +832,179 @@
       ]
     },
     {
-      "libelle": "Nike Sportswear Swoosh",
-      "description": "Logo Swoosh doublé pour deux fois plus de plaisir. Le pantalon Nike Sportswear Swoosh est confectionné dans un tissu en molleton pour vous offrir un maximum de douceur lors de vos aventures quotidiennes.",
-      "prix_u": 45.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/883f38ed-bb2b-4980-bcdc-f2d38efcba9c/pantalon-en-molleton-sportswear-swoosh-pour-plus-age-JGsxVB.jpg",
+      "libelle": "Spring Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/b8/34/d8/b834d8eadebf26722b164b63f48d4707.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "black",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Flowers Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/d9/96/09/d99609f5cb8d1347d7e8133ec565242d.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Spring Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/67/ed/71/67ed71366e8382e9c7d9ce986b540fa7.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "green",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Spring Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/5d/95/fe/5d95fe0916baf8091836d3ef6aab632d.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "purple",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Spring Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/2e/ef/ad/2eefad46db24c2aea614457a62dfbcb9.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "red",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Spring Dress Women",
+      "description": "A really cute dress ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/9c/42/21/9c4221905b9faab2d1295b08728b6651.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "robe",
+      "type-article": "robe",
+      "couleur": "yellow",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Basic Jean Men",
+      "description": "A really cool jean ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/56/b6/21/56b621802a7e68200ba8b5b7558bb2a0.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "jean",
+      "type-article": "jean",
+      "couleur": "blue",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Basic Jean Men",
+      "description": "A really cool jean ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/9e/bd/86/9ebd862a061894e4a49ab9ff17610050.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "jean",
+      "type-article": "jean",
+      "couleur": "black",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Basic Jean Men",
+      "description": "A really cool jean ! You will absolutely love it.",
+      "prix_u": 22.85,
+      "image": "https://i.pinimg.com/564x/df/5b/a4/df5ba43bbe9161b70c90e0478b1cdafa.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "jean",
+      "type-article": "jean",
+      "couleur": "brown",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Bicolor Short Kids",
+      "description": "A really cute short ! Your child will absolutely love it.",
+      "prix_u": 15.95,
+      "image": "https://i.pinimg.com/564x/fb/81/ad/fb81ad55955bf1e9f735e95d760d7246.jpg",
       "sections": [
         "enfant"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -835,17 +1012,17 @@
       ]
     },
     {
-      "libelle": "Nike",
-      "description": "Le pantalon à chevilles resserrées Nike est confectionné dans un tissu en molleton épais pour lui offrir un maximum de chaleur et de confort. La coupe fuselée et près du corps offre une grande liberté de mouvement aux tout-petits, pour jouer toute la journée.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5acdb3ab-0026-4e4d-8ed6-9c085cb95953/pantalon-a-chevilles-resserrees-jdi-pour-jeune-QpHJv2.jpg",
+      "libelle": "Flowers Short Kids",
+      "description": "A really cute short ! Your child will absolutely love it.",
+      "prix_u": 15.95,
+      "image": "https://i.pinimg.com/564x/8b/68/3e/8b683e30de96c31391e745dbdb5cddbf.jpg",
       "sections": [
         "enfant"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -853,17 +1030,17 @@
       ]
     },
     {
-      "libelle": "Nike Tech Pack",
-      "description": "Confectionné dans un tissu doux et épais, le pantalon Nike Tech Pack affiche un look inspiré des pantalons de jogging, qui s'affine au niveau des chevilles pour mettre en valeur vos sneakers. Poches latérales pour ranger vos petits objets.",
-      "prix_u": 70.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e6cxk3qpykzemuasenwz/pantalon-tech-pack-pour-CQVd5R.jpg",
+      "libelle": "Basic Short Kids",
+      "description": "A really cute short ! Your child will absolutely love it.",
+      "prix_u": 15.95,
+      "image": "https://i.pinimg.com/564x/6a/01/b0/6a01b06c3ea9367c06d5ef7ec1e90a17.jpg",
       "sections": [
         "enfant"
       ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "blue",
+      "tailles": [
         "S",
         "M",
         "L",
@@ -871,295 +1048,24 @@
       ]
     },
     {
-      "libelle": "Nike ISPA",
-      "description": "Intégrant les toutes dernières innovations et la nouvelle philosophie ISPA de Nike, qui repose sur les principes d'improvisation, de récupération, de protection et d'adaptation, le pantalon Nike ISPA est entièrement tourné vers l'expression expérimentale. Conçu pour les citadins du futur, ce modèle polyvalent présente des détails ajustables.",
-      "prix_u": 200.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5804df8e-07ef-4d07-8f41-70b0c6bf465e/pantalon-ajustable-ispa-wwP06x.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear Swoosh",
-      "description": "Confectionné dans un tissu Fleece doux, le pantalon Nike Sportswear Swoosh vous offre un confort classique et un style urbain et audacieux. Imprimé Swoosh sur toute la surface pour un look premium.",
-      "prix_u": 60.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/06b3ff50-1842-4988-bf41-addac6026c88/pantalon-sportswear-swoosh-X5w6pZ.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "pantalon",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Dri-FIT Strike",
-      "description": "Le haut d'entraînement de football Nike Dri-FIT Strike est fabriqué avec un tissu anti-transpiration extensible pour rester rapide et au sec. La coupe près du corps et les ouvertures pour les pouces assurent un look profilé conçu pour la vitesse.",
-      "prix_u": 55.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fb222f85-4f26-4dc2-b60a-e246f8ac37b9/haut-de-football-dri-fit-strike-pour-WspBp7.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Windrunner",
-      "description": "Un classique revisité pour la performance. La veste Nike Windrunner est confectionnée dans une matière légère qui vous offre un maximum de confort et de protection tout au long de votre run. Les nouvelles poches permettent de ranger vos affaires et de replier votre veste lorsque vous êtes prêt à enlever une épaisseur.",
-      "prix_u": 100.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/91fda7c9-d7ad-420f-a859-30d098372970/veste-de-running-windrunner-pour-L2pvlZ.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Dri-FIT Academy",
-      "description": "Le haut de football Nike Dri-FIT Academy est confectionné en tissu Fleece doux pour vous faire bénéficier d'un maximum de chaleur sur le terrain par temps froid. Ses manches extensibles vous offrent une grande liberté de mouvement, tandis que sa technologie anti-transpiration vous permet de rester au sec.",
-      "prix_u": 40.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ff9f3c81-b236-4805-a77b-dcf654f55f3b/haut-de-football-dri-fit-academy-pour-T52pJ1.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike AeroLoft Repel",
-      "description": "La veste Nike AeroLoft Repel vous offre l'équilibre parfait entre chaleur et respirabilité, pour un confort optimal tout au long de la partie. Les détails élégants vous offrent une liberté de mouvement optimale tout au long de votre swing.",
-      "prix_u": 190.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ivwotn4fowdpgkljfseu/veste-de-golf-aeroloft-repel-pour-1NwCkJ.jpg",
-      "sections": [
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Hurley Winchester",
-      "description": "Le haut Hurley Winchester est confectionné dans un tissu en mélange de coton ultra-doux et intègre une capuche amovible conçue pour vous protéger des intempéries.",
-      "prix_u": 85.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/txpblzj5iygwp0x4ypoj/haut-a-zip-en-tissu-fleece-hurley-winchester-pour-H5bjpn.jpg",
-      "sections": [
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Shield",
-      "description": "La veste Nike Shield est conçue pour vous protéger des plus grosses intempéries tandis que vous accumulez les kilomètres. Les poches pratiques et la capuche vous garantissent une protection optimale où que vous alliez.",
-      "prix_u": 135.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6cdaf995-c22e-44f0-990c-5c461376b32b/veste-de-running-shield-pour-KX59Bx.jpg",
-      "sections": [
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Warriors",
-      "description": "Échauffez-vous en toute légèreté. La doudoune Nike NBA Golden State Warriors offre un confort optimal à votre enfant par temps froid tout en affichant sa fierté de supporter.",
-      "prix_u": 115.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qsppbz8qjjt8pq87imcd/doudoune-nba-warriors-pour-plus-age-dKwvTF.jpg",
+      "libelle": "Basic Short Kids",
+      "description": "A really cute short ! Your child will absolutely love it.",
+      "prix_u": 15.95,
+      "image": "https://i.pinimg.com/564x/86/5d/9a/865d9a0c4eed369a9e3f9db8d05afae4.jpg",
       "sections": [
         "enfant"
       ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
+      "categorie": "short",
+      "type-article": "short",
+      "couleur": "black",
+      "tailles": [
         "S",
         "M",
         "L",
         "XL"
       ]
     },
-    {
-      "libelle": "Nike Sportswear",
-      "description": "Le sweat à capuche Nike Sportswear est confectionné dans un tissu en maille épais pour une sensation de douceur et de chaleur.",
-      "prix_u": 50.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ebhol9bh4o1cibyynlns/sweat-a-capuche-entierement-zippe-sportswear-pour-plus-age-lVsSrt.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear",
-      "description": "Le sweat à capuche Nike Sportswear est la protection légère parfaite, agrémentée d'une touche rétro inspirée des années 90. Fermez-le et mettez la capuche pour une protection supplémentaire.",
-      "prix_u": 50.00,
-      "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/961412b6-f1e4-43de-9f8f-9e3c63250ff9/sweat-a-capuche-et-zip-sportswear-pour-plus-age-mJdLr5.jpg",
-      "sections": [
-        "enfant"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike 50",
-      "description": "La veste Nike 50 offre le confort doux du coton et l'aspect unique des fibres recyclées dans une silhouette emblématique.",
-      "prix_u": 110.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1e1663b5-8041-4958-9874-dfaf42747b58/veste-50-03BHs4.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Nike Sportswear NSW Windrunner",
-      "description": "Adoptez un style plus grand que nature avec la veste Nike Sportswear NSW Windrunner, une version surdimensionnée de la Windrunner classique qui présente une coupe ultra-ample, des motifs oversize et des couleurs électriques.",
-      "prix_u": 55.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-69f29bd1-7d61-4430-901e-8628a6eb9c4c/veste-a-zip-sportswear-nsw-windrunner-sqLGXJ.jpg",
-      "sections": [
-        "homme",
-        "femme"
-      ],
-      "categorie": "vetement",
-      "type-article": "veste",
-      "couleur": "vert",
-"tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ]
-    },
-    {
-      "libelle": "Air Jordan 1 Mid",
-      "description": "La chaussure Air Jordan 1 Mid s’inspire de la première AJ1 et témoigne de l'évolution de la marque Jordan depuis 1985, pour le plus grand plaisir des fans de l'OG.",
-      "prix_u": 110.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/00f50b7a-099c-4b85-ad87-8b467134ed52/chaussure-air-jordan-1-mid-3JkV1d.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "chaussure",
-      "type-article": "basket",
-      "couleur": "vert",
-"tailles": [
-        "38",
-        "38.5",
-        "39",
-        "39.5",
-        "40",
-        "40.5",
-        "41",
-        "41.5",
-        "42",
-        "43",
-        "44",
-        "45"
-      ]
-    },
-    {
-      "libelle": "Nike Air Max Plus III",
-      "description": "Équipée de la même technologie Tuned Air que ses aînées, la Nike Air Max Plus III revisite un style classique avec du TPU fusionné sur l'empeigne, tout en rendant hommage à l'emblématique dégradé de couleurs de l'originale.",
-      "prix_u": 180.00,
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2e9f5de4-8c15-48e6-9a08-792a130baed8/chaussure-air-max-plus-iii-pour-gmzPHx.jpg",
-      "sections": [
-        "homme"
-      ],
-      "categorie": "chaussure",
-      "type-article": "basket",
-      "couleur": "vert",
-"tailles": [
-        "38",
-        "38.5",
-        "39",
-        "39.5",
-        "40",
-        "40.5",
-        "41",
-        "41.5",
-        "42",
-        "43",
-        "44",
-        "45"
-      ]
-    },
+
     {
       "libelle": "Nike Air Force 1 '07",
       "description": "La Nike Air Force 1 ’07 est une silhouette emblématique du basketball qui revisite ses éléments les plus remarquables : le cuir impeccable, les couleurs vives et juste ce qu’il faut d’éclat pour vous faire briller.",
@@ -1170,7 +1076,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "38",
         "38.5",
@@ -1196,7 +1102,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "38",
         "38.5",
@@ -1222,7 +1128,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "38",
         "38.5",
@@ -1248,7 +1154,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "38",
         "38.5",
@@ -1274,7 +1180,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "38",
         "38.5",
@@ -1292,7 +1198,7 @@
     },
     {
       "libelle": "Nike Air Force 1 '07",
-      "description": "Le charme continue à opérer avec la Nike Air Force 1 '07. Cette silhouette emblématique du basketball apporte un nouveau souffle à ses éléments les plus remarquables : un cuir impeccable et un coloris noir intégral pour une allure exceptionnelle sur le terrain comme au quotidien.",
+      "description": "Le charme continue à opérer avec la Nike Air Force 1 '07. Cette silhouette emblématique du basketball apporte un nouveau souffle à ses éléments les plus remarquables : un cuir impeccable et un coloris black intégral pour une allure exceptionnelle sur le terrain comme au quotidien.",
       "prix_u": 100.00,
       "image": "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ev1fzfqsdgfwnfw2a8rn/chaussure-air-force-1-07-pour-sg6nmr.jpg",
       "sections": [
@@ -1300,7 +1206,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "35",
         "35.5",
@@ -1324,7 +1230,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "35",
         "35.5",
@@ -1348,7 +1254,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "35",
         "35.5",
@@ -1372,7 +1278,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "35",
         "35.5",
@@ -1396,7 +1302,7 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "35",
         "35.5",
@@ -1421,7 +1327,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1437,7 +1343,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1453,7 +1359,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1469,7 +1375,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1484,7 +1390,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1499,7 +1405,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1514,7 +1420,7 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
@@ -1529,78 +1435,11 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "couleur": "vert",
-"tailles": [
-        "unique"
-      ]
-    },
-    {
-      "libelle": "Écharpe REAL MADRID",
-      "description": "Une écharpe à brandir ou à porter. Symbole de soutien depuis près d'un siècle, l'écharpe de football est un véritable must-have pour les fans. Conçue en maille douce, elle affiche le nom, le blason et les couleurs du Real Madrid. Des franges traditionnelles complètent le look aux extrémités.",
-      "prix_u": 19.95,
-      "image": "https://assets.adidas.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/68a692f5cfed45ff81feaa090101ae52_9366/Echarpe_Real_Madrid_Bleu_DY7707_01_standard.jpg",
-      "sections": [
-        "homme",
-        "femme",
-        "enfant"
-      ],
-      "categorie": "accessoire",
-      "type-article": "echarpe",
-      "couleur": "vert",
-"tailles": [
-        "unique"
-      ]
-    },
-    {
-      "libelle": "Écharpe de l'Allemagne",
-      "description": "Indispensable à tous les vrais fans. Affiche ton soutien à l'équipe nationale allemande avec cette écharpe de football adidas. Porte-la au stade pour te réchauffer ou accroche-la au mur de ta chambre.",
-      "prix_u": 19.95,
-      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/0b14ea641d204235b577aaed010f15ca_9366/Echarpe_de_l'Allemagne_Blanc_FJ0822.jpg",
-      "sections": [
-        "homme",
-        "femme",
-        "enfant"
-      ],
-      "categorie": "accessoire",
-      "type-article": "echarpe",
-      "couleur": "vert",
-"tailles": [
-        "unique"
-      ]
-    },
-    {
-      "libelle": "Écharpe Espagne",
-      "description": "Affiche ta passion pour l'Espagne. Apporte cette écharpe de football adidas au stade ou accroche-la au mur de ta chambre. Un côté représente les couleurs traditionnelles de l'équipe et l'autre est orné des 3 bandes adidas.",
-      "prix_u": 19.95,
-      "image": "https://assets.adidas.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/2292121f84df4c26b2c0ab0500cf0221_9366/Echarpe_Espagne_Rouge_FJ0803_01_standard.jpg",
-      "sections": [
-        "homme",
-        "femme",
-        "enfant"
-      ],
-      "categorie": "accessoire",
-      "type-article": "echarpe",
-      "couleur": "vert",
-"tailles": [
-        "unique"
-      ]
-    },
-    {
-      "libelle": "Écharpe Domicile Belgique",
-      "description": "Enroule-la autour du cou ou tends-la fièrement au-dessus de ta tête. Les écharpes sont depuis longtemps un symbole des supporters de football. Cette écharpe domicile de la Belgique adidas reprend les couleurs rouge, noir et jaune de l'équipe. Sa maille douce t'offre un maximum de confort tout en montrant ton soutien.",
-      "prix_u": 19.95,
-      "image": "https://assets.adidas.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/61f042c608ba4cdf88acab0500c72f83_9366/Echarpe_domicile_Belgique_Rouge_FJ0936_01_standard.jpg",
-      "sections": [
-        "homme",
-        "femme",
-        "enfant"
-      ],
-      "categorie": "accessoire",
-      "type-article": "echarpe",
-      "couleur": "vert",
+      "couleur": "green",
 "tailles": [
         "unique"
       ]
     }
+
   ]
 }
