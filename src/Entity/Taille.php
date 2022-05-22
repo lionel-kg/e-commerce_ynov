@@ -28,7 +28,7 @@ class Taille
     private $libelle;
 
     /**
-     * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="taille")
+     * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="taille" , cascade={"remove"})
      */
     private $stockTailles;
 

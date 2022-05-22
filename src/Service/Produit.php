@@ -145,6 +145,37 @@ class Produit extends ProduitServiceTool
     }
 
     /**
+     * @param string $jwt
+     * @param int $id
+     * @return array
+     * @throws \JsonException
+     */
+    public function removeProduit(string $jwt,int $id)
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","produits"=>[]];
+        $admin = $this->checktJwt($jwt);
+        $isAdmin = in_array("ROLE_ADMIN",$admin->getRoles());
+        try{
+            if($isAdmin === true){
+                $produit = $this->findById($id);
+                if($produit === null){
+                    $response["error"] = "Aucun produit trouvé";
+                }
+                $this->em->remove($produit);
+                $this->em->flush();
+            }
+        } catch (\Exception $e) {
+            $errorDebug = sprintf("Exception : %s" , $e->getMessage());
+        }
+        if($errorDebug !== ""){
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la récuperation des produits";
+        }
+        return $response;
+    }
+
+    /**
      * @param int $id
      * @return array
      */

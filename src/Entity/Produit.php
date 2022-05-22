@@ -24,7 +24,7 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"produit_info"})
+     * @Groups({"produit_info","commande_info"})
      */
     private $nom;
 
@@ -36,12 +36,12 @@ class Produit
 
     /**
      * @ORM\Column(type="float")
-     * @Groups({"produit_info"})
+     * @Groups({"produit_info","commande_info"})
      */
     private $prix;
 
     /**
-     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="produit", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="produit", orphanRemoval=true , cascade={"remove"})
      */
     private $ligneCommandes;
 
@@ -51,7 +51,7 @@ class Produit
     private $categorie;
 
     /**
-     * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="produit")
+     * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="produit", cascade={"remove"})
      * @Groups({"produit_info"})
      */
     private $stockTailles;
@@ -63,6 +63,7 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"produit_info"},{"commande_info"})
      */
     private $couleur;
 

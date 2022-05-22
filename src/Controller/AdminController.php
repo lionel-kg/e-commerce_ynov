@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Admin as AdminEntity;
+use App\Service\Produit as ProduitService;
 use App\Service\User as UserService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -103,6 +104,30 @@ class AdminController extends CustomAbstractController
             "user"=> $user,
         ] = $userService->adminActiveUser($newParameters,$jwt,$id);
         return $this->sendSuccess("User Edited Success",$user,response::HTTP_CREATED);
+    }
+
+    /**
+     * @Route("/remove/{id}",methods={"GET"},name="_remove_produit")
+     * @param Request $request
+     * @param ProduitService $produitService
+     * @param string $id
+     * @return JsonResponse
+     * @throws \JsonException
+     */
+    public function deleteProduit(Request $request, ProduitService $produitService, string $id): JsonResponse
+    {
+        $errorDebug = "";
+        $parameters = $this->getParameters($request);
+        $jwt = $this->getJwt($request);
+        [
+            "error" => $error,
+            "errorDebug"=> $errorDebug,
+        ] = $produitService->removeProduit($jwt,$id);
+        if($errorDebug !== "")
+        {
+            return $this->sendError($error,$errorDebug);
+        }
+        return $this->sendSuccess("User Edited Success",null,response::HTTP_CREATED);
     }
 
     /**

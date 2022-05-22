@@ -35,7 +35,8 @@ class Commande
     private $prix;
 
     /**
-     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande", orphanRemoval=true , cascade={"remove"})
+     * @Groups({"commande_info"})
      */
     private $ligneCommande;
 

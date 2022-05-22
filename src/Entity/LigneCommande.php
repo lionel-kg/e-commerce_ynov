@@ -21,12 +21,14 @@ class LigneCommande
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"commande_info"})
      */
     private $qte;
 
     /**
      * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="ligneCommandes")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"commande_info"})
      */
     private $produit;
 
