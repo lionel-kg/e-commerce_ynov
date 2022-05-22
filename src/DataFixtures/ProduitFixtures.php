@@ -53,6 +53,7 @@ class ProduitFixtures extends Fixture
                             $categorie->addProduit($article);
                             $article->setPrix($ar['prix_u']);
                             $article->setImage($ar['image']);
+                            $article->setCouleur($ar['couleur']);
                             foreach($sections as $sec){
                                 if($sec->getLibelle() === $ar["sections"][0])
                                     $article->addSection($sec);

@@ -1,6 +1,294 @@
 {
   "articles": [
     {
+      "libelle": "Butterfly Shirt Kids",
+      "description": "A really cute shirt, that your child would absolutely love",
+      "prix_u": 19.95,
+      "image": "https://i.pinimg.com/564x/56/84/e3/5684e36c6c607a81f2df965b658ca033.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "multicolor",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Brown Pull Kids",
+      "description": "A really cute shirt, that your child would absolutely love",
+      "prix_u": 24.95,
+      "image": "https://i.pinimg.com/564x/14/8e/d5/148ed59cb3b8a7c08c870ea90a00f548.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "marron",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Optimistic Shirt  Kids",
+      "description": "A really cute shirt, that your child would absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/14/8e/d5/148ed59cb3b8a7c08c870ea90a00f548.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "vert",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Happy Mind Shirt Kids",
+      "description": "A really cute shirt, that your child would absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/55/ab/d2/55abd2cf2d813d65dc50739e9b4c5a5d.jpg",
+      "sections": [
+        "enfant"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "bleu",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Heart Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 9.95,
+      "image": "https://i.pinimg.com/564x/61/fa/7d/61fa7d831e03ccbc40e605c4d22f9291.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "noir",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Rose Black Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 9.95,
+      "image": "https://i.pinimg.com/564x/c2/bf/88/c2bf88f799e70c153a0ec1d771daeb96.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "bleu",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Panda Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 9.95,
+      "image": "https://i.pinimg.com/564x/6f/08/b4/6f08b4bf08dfadb996d877017cc3b671.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "vert",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Rose Purple Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/1c/ef/25/1cef258bc2d09265741ba37d8c6652f6.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "violet",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Stripe Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 19.95,
+      "image": "https://i.pinimg.com/564x/c3/8f/a4/c38fa451cb825441fa9b627e3535993a.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "rose",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Hands Shirt Men",
+      "description": "A really cool shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/70/e5/f3/70e5f3d2071d7e54935da2622e8473d3.jpg",
+      "sections": [
+        "homme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "jaune",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Butterfly Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/ba/37/2d/ba372d3a6bb002a0d10d9b8c63ae0752.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "bleu",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Flower Power Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/54/11/22/541122af648b1153956cd43b8a76a54e.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "vert",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Flower Power Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/ef/b0/13/efb0135bb7a8aadc54d6018dbe5f85e6.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "rose",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Heart Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 14.95,
+      "image": "https://i.pinimg.com/564x/66/4b/18/664b18a1c5401a5a823b7243fc6a0ee4.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "violet",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Flower Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 9.95,
+      "image": "https://i.pinimg.com/564x/00/4a/8e/004a8e0c9bf9e1f350c7bc2ecd161161.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "rouge",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "libelle": "Hearts Shirt Women",
+      "description": "A really cute shirt, that your will absolutely love",
+      "prix_u": 9.95,
+      "image": "https://i.pinimg.com/564x/a3/2b/df/a32bdf2495fef364bec7bad9b5e83594.jpg",
+      "sections": [
+        "femme"
+      ],
+      "categorie": "t-shirt",
+      "type-article": "t-shirt",
+      "couleur": "blanc",
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
       "libelle": "Nike Sportswear JDI",
       "description": "Le tee-shirt Nike Sportswear JDI est confectionné en coton doux et présente un logo JDI classique sur la poitrine.",
       "prix_u": 29.95,
