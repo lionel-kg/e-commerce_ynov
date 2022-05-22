@@ -27,7 +27,7 @@ class CommandeController extends CustomAbstractController
         $parameters = $this->getParameters($request);
         $waitedParameter = [
             "prix" => "float",
-            "panier"=>"array"
+            "panier"=>"string"
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameter);
         if ($error !== "") {
