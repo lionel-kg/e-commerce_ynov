@@ -52,6 +52,7 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity=StockTaille::class, mappedBy="produit")
+     * @Groups({"produit_info"})
      */
     private $stockTailles;
 

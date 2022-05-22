@@ -82,7 +82,28 @@ class Produit extends ProduitServiceTool
         try{
             $produit = $this->findById($id);
             if($isAdmin === true){
+                if(isset($parameters["categorie"]) && $parameters["categorie"] === "")
+                {
+                $parameters["categorie"] = $produit->getCategorie();
+                }
+                if(isset($parameters["section"]) && $parameters["section"] === "")
+                {
+                    $parameters["section"] = $produit->getSection();
+                }
+                if(isset($parameters["nom"]) && $parameters["nom"] === "")
+                {
+                    $parameters["nom"] = $produit->getNom();
+                }
+                if(isset($parameters["image"]) && $parameters["image"] === "")
+                {
+                    $parameters["image"] = $produit->getImage();
+                }
+                if(isset($parameters["prix"]) && $parameters["prix"] === "")
+                {
+                    $parameters["prix"] = $produit->getPrix();
+                }
                 $produit = $this->editEntity($parameters,$produit);
+
                 $this->em->persist($produit);
                 $this->em->flush();
                 $response["produit"] = $produit;
@@ -138,6 +159,7 @@ class Produit extends ProduitServiceTool
                 $response["error"] = "Aucun produit trouvé";
             }
             $produit = $this->getInfoSerialize([$produit],["produit_info"]);
+            dd($produit);
             $response["produit"] = $produit;
         } catch (\Exception $e) {
             $errorDebug = sprintf("Exception : %s" , $e->getMessage());
@@ -146,6 +168,7 @@ class Produit extends ProduitServiceTool
             $response["errorDebug"] = $errorDebug;
             $response["error"] = "Erreur lors de la récuperation des produits";
         }
+        dd($response);
         return $response;
     }
 

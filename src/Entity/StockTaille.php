@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\StockTailleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+
 
 /**
  * @ORM\Entity(repositoryClass=StockTailleRepository::class)
@@ -24,11 +26,13 @@ class StockTaille
 
     /**
      * @ORM\ManyToOne(targetEntity=Taille::class, inversedBy="stockTailles")
+     * @Groups({"produit_info"})
      */
     private $taille;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"produit_info"})
      */
     private $qte;
 
