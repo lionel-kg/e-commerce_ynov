@@ -199,7 +199,6 @@ class Produit extends ProduitServiceTool
             $response["errorDebug"] = $errorDebug;
             $response["error"] = "Erreur lors de la récuperation des produits";
         }
-        dd($response);
         return $response;
     }
 

@@ -64,7 +64,6 @@ class Categorie extends CategorieTool
             $response["errorDebug"] = $errorDebug;
             $response["error"] = "erreur lors de la récuperation de la categorie";
         }
-        dd($response);
         return $response;
     }
 
