@@ -191,7 +191,6 @@ class Produit extends ProduitServiceTool
                 $response["error"] = "Aucun produit trouvé";
             }
             $produit = $this->getInfoSerialize([$produit],["produit_info"]);
-            dd($produit);
             $response["produit"] = $produit;
         } catch (\Exception $e) {
             $errorDebug = sprintf("Exception : %s" , $e->getMessage());

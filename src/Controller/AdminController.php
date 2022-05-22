@@ -91,7 +91,7 @@ class AdminController extends CustomAbstractController
         $parameters = $this->getParameters($request);
         $jwt = $this->getJwt($request);
         $waitedParameters = [
-            "active_OPT" => "int",
+            "active_OPT" => "boolean",
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
 
