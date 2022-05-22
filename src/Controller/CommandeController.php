@@ -25,6 +25,7 @@ class CommandeController extends CustomAbstractController
         $errorDebug = "";
         $jwt = $this->getJwt($request);
         $parameters = $this->getParameters($request);
+        //dd($jwt,$parameters);
         $waitedParameter = [
             "prix" => "float",
             "panier"=>"string"

@@ -109,7 +109,9 @@ class AdminController extends CustomAbstractController
     }
 
     /**
+     * @Route("/user/all",methods={"GET"},name="_user_all")
      * @return void
+     * @throws \JsonException
      */
     public function getAllUser(Request $request,UserService $userService):JsonResponse
     {

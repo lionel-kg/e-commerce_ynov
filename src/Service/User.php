@@ -254,16 +254,17 @@ class User extends UserServiceTool
         }
         try {
             if($isAdmin === true){
-                $user = $this->findALl();
-                if($user === null){
+                $users = $this->findAllUser();
+                if($users === null){
                     $response["error"] = "Aucun utilisateur trouvé";
                 }
-                $response["users"] = $user;
+                $users = $this->getInfoSerialize([$users],["user_info"]);
+                $response["users"] = $users;
             }
         } catch (\Exception $e) {
             $response["errorDebug"] = sprintf("Exception : %s",$e->getMessage());
             $response["error"] = "Erreur lors de la récuperation des utilisateur";
         }
-        $response;
+         return $response;
     }
 }
