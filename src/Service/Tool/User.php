@@ -2,7 +2,7 @@
 
 namespace App\Service\Tool;
 
-use App\Entity\Client;
+use App\Entity\Client as ClientEntity;
 use App\Service\CustomAbstractService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -68,15 +68,15 @@ class User extends CustomAbstractService
      */
     public function findById(int $id): ?UserEntity
     {
-        return $this->em->getRepository(Client::class)->find($id);
+        return $this->em->getRepository(ClientEntity::class)->find($id);
     }
 
     /**
-     * @return UserEntity|null
+     * @return array
      */
-    public function findALl():?UserEntity
+    public function findAllUser():array
     {
-        return $this->em->getRepository(Client::class)->findAll();
+        return $this->em->getRepository(ClientEntity::class)->findAll();
     }
 
 }
