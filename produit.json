@@ -11,7 +11,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "multicolor",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -29,7 +29,8 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "marron",
-      "tailles": [
+
+"tailles": [
         "S",
         "M",
         "L",
@@ -47,7 +48,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "vert",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -65,7 +66,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "bleu",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -83,7 +84,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "noir",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -101,7 +102,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "bleu",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -119,7 +120,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "vert",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -137,7 +138,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "violet",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -155,7 +156,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "rose",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -173,7 +174,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "jaune",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -191,7 +192,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "bleu",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -209,7 +210,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "vert",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -227,7 +228,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "rose",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -245,7 +246,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "violet",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -263,7 +264,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "rouge",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -281,7 +282,7 @@
       "categorie": "t-shirt",
       "type-article": "t-shirt",
       "couleur": "blanc",
-      "tailles": [
+"tailles": [
         "S",
         "M",
         "L",
@@ -298,7 +299,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -315,7 +317,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -332,7 +335,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -349,7 +353,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -366,7 +371,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -383,7 +389,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -399,7 +406,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -416,7 +424,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -433,7 +442,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -451,7 +461,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -469,7 +480,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -487,7 +499,8 @@
       ],
       "categorie": "vetement",
       "type-article": "t-shirt",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "XS",
         "S",
         "M",
@@ -505,7 +518,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -522,7 +536,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -539,7 +554,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -556,7 +572,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -573,7 +590,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -590,7 +608,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -608,7 +627,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -626,7 +646,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pull",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -643,7 +664,8 @@
       ],
       "categorie": "vetement",
       "type-article": "jupe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -660,7 +682,8 @@
       ],
       "categorie": "vetement",
       "type-article": "jupe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -677,7 +700,8 @@
       ],
       "categorie": "vetement",
       "type-article": "jupe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -694,7 +718,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -711,7 +736,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -728,7 +754,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -745,7 +772,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -762,7 +790,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -779,7 +808,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -796,7 +826,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -813,7 +844,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -830,7 +862,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -848,7 +881,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -866,7 +900,8 @@
       ],
       "categorie": "vetement",
       "type-article": "pantalon",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -883,7 +918,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -900,7 +936,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -917,7 +954,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -934,7 +972,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -951,7 +990,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -968,7 +1008,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -985,7 +1026,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -1002,7 +1044,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -1019,7 +1062,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -1037,7 +1081,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -1055,7 +1100,8 @@
       ],
       "categorie": "vetement",
       "type-article": "veste",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "S",
         "M",
         "L",
@@ -1072,7 +1118,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1097,7 +1144,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1122,7 +1170,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1147,7 +1196,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1172,7 +1222,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1197,7 +1248,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1222,7 +1274,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "38",
         "38.5",
         "39",
@@ -1247,7 +1300,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "35",
         "35.5",
         "36",
@@ -1270,7 +1324,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "35",
         "35.5",
         "36",
@@ -1293,7 +1348,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "35",
         "35.5",
         "36",
@@ -1316,7 +1372,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "35",
         "35.5",
         "36",
@@ -1339,7 +1396,8 @@
       ],
       "categorie": "chaussure",
       "type-article": "basket",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "35",
         "35.5",
         "36",
@@ -1363,7 +1421,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1378,7 +1437,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1393,7 +1453,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1408,7 +1469,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1422,7 +1484,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1436,7 +1499,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1450,7 +1514,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1464,7 +1529,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "casquette",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1480,7 +1546,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "echarpe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1496,7 +1563,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "echarpe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1512,7 +1580,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "echarpe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     },
@@ -1528,7 +1597,8 @@
       ],
       "categorie": "accessoire",
       "type-article": "echarpe",
-      "tailles": [
+      "couleur": "vert",
+"tailles": [
         "unique"
       ]
     }
