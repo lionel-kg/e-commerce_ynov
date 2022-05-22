@@ -205,6 +205,7 @@ class Produit extends ProduitServiceTool
     /**
      * @param array $parameters
      * @param Categorie $categorieService
+     * @param Section $sectionService
      * @return array
      */
     public function getProduitFromCategorie(array $parameters,CategorieService $categorieService, SectionService $sectionService): array
@@ -230,6 +231,8 @@ class Produit extends ProduitServiceTool
                 }
                 $produits = $sectionService->findSectionById($parameters["section"])["produits"];
                 $produits[0]->getNom();
+            }elseif(isset($parameters["couleur"]) && $parameters["couleur"] !== ""){
+                $produits = $this->findFromFilter(["couleur"=>$parameters["couleur"]]);
             }
             if($produits === null){
                 $response["error"] = "Aucun produit trouvé";

@@ -50,12 +50,15 @@ class ProduitFixtures extends Fixture
                             $article = new Produit();
                             $article->setNom($ar['libelle']);
                             $article->setCategorie($categorie);
+                            $article->setDescription($ar["description"]);
                             $categorie->addProduit($article);
                             $article->setPrix($ar['prix_u']);
                             $article->setImage($ar['image']);
                             $article->setCouleur($ar['couleur']);
                             foreach($sections as $sec){
-                                $article->addSection($sec);
+                                if($ar["sections"][0] === $sec->getLibelle()){
+                                    $article->addSection($sec);
+                                }
                             }
                             foreach($ar['tailles'] as $tai){
                                 foreach($tailles as $tail){

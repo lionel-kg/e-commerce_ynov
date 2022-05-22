@@ -67,6 +67,11 @@ class Produit
      */
     private $couleur;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
@@ -219,6 +224,18 @@ class Produit
     public function setCouleur(?string $couleur): self
     {
         $this->couleur = $couleur;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

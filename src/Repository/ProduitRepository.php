@@ -80,7 +80,7 @@ class ProduitRepository extends ServiceEntityRepository
             ->andWhere('p.nom LIKE :name')
             ->setParameter('name', "%".$name."%")
             ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->setMaxResults(20)
             ->getQuery()
             ->getResult()
             ;

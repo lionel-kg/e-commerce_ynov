@@ -52,4 +52,12 @@ class Section extends CustomAbstractService
     {
         return $this->em->getRepository(SectionEntity::class)->findAll();
     }
+
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    public function findByName(string $name){
+        return $this->em->getRepository(SectionEntity::class)->findByName($name);
+    }
 }
