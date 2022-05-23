@@ -34,6 +34,7 @@ class ProduitController extends CustomAbstractController
             "prix"=>"float",
             "image"=>"string",
             "couleur"=>"string",
+            "description"=>"text",
         ];
         ["error" => $error, "parameters" => $newParameters] = $this->checkParameters($parameters, $waitedParameters);
         if ($error !== "") {
