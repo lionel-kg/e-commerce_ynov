@@ -93,7 +93,7 @@ class Commande extends CommandeTool
     public function getCommandeById(string $jwt,CommandeService $commandeService,int $id):array
     {
         $errorDebug = "";
-        $response = ["error"=>"","errorDebug"=>"","commandes"=>[]];
+        $response = ["error"=>"","errorDebug"=>"","commande"=>[]];
         $client = $this->checktJwt($jwt);
         if($client === null){
             $response["error"] = "Aucun client trouvé";
