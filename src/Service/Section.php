@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Service;
-use App\Service\Tool\Section as SectionTool;
+use App\Service\Tool\Taille as SectionTool;
 use App\Entity\Section as SectionEntity;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;

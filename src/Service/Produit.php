@@ -4,7 +4,7 @@ namespace App\Service;
 
 use App\Entity\Produit as ProduitEntity;
 use App\Service\Categorie as CategorieService;
-use App\Service\Section as SectionService;
+use App\Service\Taille as SectionService;
 use App\Service\Tool\Produit as ProduitServiceTool;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -27,7 +27,7 @@ class Produit extends ProduitServiceTool
      * @param array $parameter
      * @param string $jwt
      * @param CategorieService $categorieService
-     * @param Section $sectionService
+     * @param Taille $sectionService
      * @return array
      * @throws \JsonException
      */
@@ -82,9 +82,9 @@ class Produit extends ProduitServiceTool
         try{
             $produit = $this->findById($id);
             if($isAdmin === true){
-                if(isset($parameters["categorie"]) && $parameters["categorie"] === "")
+                if(isset($parameters["categorie"]) && $parameters["categorie"] === "" || $parameters["categorie"] === "undefined")
                 {
-                    $parameters["categorie"] = $produit->getCategorie();
+                    $parameters["categorie"] = $produit->getCategorie()->getId();
                     $categorie = $categorieService->findById($parameters["categorie"]);
                     $produit->setCategorie($categorie);
                 } else {
@@ -92,17 +92,25 @@ class Produit extends ProduitServiceTool
                     $produit->setCategorie($categorie);
                 }
 
-                if(isset($parameters["nom"]) && $parameters["nom"] === "")
+                if(isset($parameters["nom"]) && $parameters["nom"] === "" || $parameters["nom"] === "undefined")
                 {
                     $parameters["nom"] = $produit->getNom();
                 }
-                if(isset($parameters["image"]) && $parameters["image"] === "")
+                if(isset($parameters["image"]) && $parameters["image"] === "" || $parameters["image"] === "undefined")
                 {
                     $parameters["image"] = $produit->getImage();
                 }
-                if(isset($parameters["prix"]) && $parameters["prix"] === "")
+                if(isset($parameters["prix"]) && $parameters["prix"] === "" || $parameters["prix"] === "undefined")
                 {
                     $parameters["prix"] = $produit->getPrix();
+                }
+                if(isset($parameters["couleur"]) && $parameters["couleur"] === "" || $parameters["couleur"] === "undefined")
+                {
+                    $parameters["couleur"] = $produit->getCouleur();
+                }
+                if(isset($parameters["description"]) && $parameters["description"] === "" || $parameters["description"] === "undefined")
+                {
+                    $parameters["description"] = $produit->getDescription();
                 }
                 $produit = $this->editEntity($parameters,$produit);
                 $this->em->persist($produit);
@@ -205,7 +213,7 @@ class Produit extends ProduitServiceTool
     /**
      * @param array $parameters
      * @param Categorie $categorieService
-     * @param Section $sectionService
+     * @param Taille $sectionService
      * @return array
      */
     public function getProduitFromCategorie(array $parameters,CategorieService $categorieService, SectionService $sectionService): array

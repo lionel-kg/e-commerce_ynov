@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Service\Tool\Commande as CommandeTool;
 use App\Service\StatutCommande as StatutCommandeService;
 use App\Service\LigneCommande as LigneCommandeService;
-
+use App\Service\Taille as TailleService;
 use App\Service\Produit as ProduitService;
 use App\Service\Commande as CommandeService;
 use App\Entity\Commande as CommandeEntity;
@@ -33,6 +33,7 @@ class Commande extends CommandeTool
         ProduitService $produitService ,
         CommandeService $commandeService,
         StatutCommandeService $statutCommandeService,
+        TailleService $tailleService,
         string $jwt )
     {
         $errorDebug = "";
@@ -41,14 +42,12 @@ class Commande extends CommandeTool
         try {
             $commande = $this->createEntity($parameters);
             $panier = $parameters["panier"];
-            $array = explode(",",$panier);
-            $panier = [];
-
             $statut = $statutCommandeService->getStatutById(rand(1,6));
             if($statut === null){
                 $response["error"] = "Aucun statut trouvé";
             }
-            for($i = 0; $i < count($array); $i++){
+
+            /*for($i = 0; $i < count($array); $i++){
                 if($i%2 === 0){
                     $panier[$i]["produit"] = $produitService->findById($array[$i]);
                 } else {
@@ -57,10 +56,16 @@ class Commande extends CommandeTool
             }
             if(count($panier) <= 0 ){
                 $response["error"] = "votre panier est vide veuillez le remplir";
-            }
-            foreach ($panier as $produit ){
-                $res = $ligneCommandeService->add($parameters,$produit["produit"],$produit["qte"]);
+            }*/
+            foreach ($panier as $ligne ){
+                $produit = $produitService->findById($ligne["produit"]);
+                if($produit === null ){
+                    $response["error"] = "Aucun produit trouvé";
+                }
+                $res = $ligneCommandeService->add($parameters,$produit,$ligne["qte"]);
+                $taille = $tailleService->findTailleById($ligne["size"]);
                 $ligneCommande = $res["ligneCommande"];
+                $ligneCommande->setTaille($taille);
                 $commande->addLigneCommande($ligneCommande);
                 $commande->setClient($user);
                 $this->em->persist($ligneCommande);
@@ -78,7 +83,40 @@ class Commande extends CommandeTool
         }
         return $response;
     }
-
+    /**
+     * @param string $jwt
+     * @param CommandeService $commandeService
+     * @param int $id
+     * @return array
+     * @throws \JsonException
+     */
+    public function getCommandeById(string $jwt,CommandeService $commandeService,int $id):array
+    {
+        $errorDebug = "";
+        $response = ["error"=>"","errorDebug"=>"","commandes"=>[]];
+        $client = $this->checktJwt($jwt);
+        if($client === null){
+            $response["error"] = "Aucun client trouvé";
+            return $response;
+        }
+        try {
+            $commande = $commandeService->getCommande($id);
+            if ($commande === null) {
+                $response["error"] = "Aucune commande trouvé";
+                return $response;
+            }
+            if($commande->getClient() !== $client){
+                $response["error"] = "Cette commande ne vous appartient pas";
+                return $response;
+            }
+            $commande = $this->getInfoSerialize([$commande],["info_facture"]);
+            $response["commande"] = $commande;
+        } catch (\Exception $e) {
+            $response["errorDebug"] = $errorDebug;
+            $response["error"] = "Erreur lors de la modification de l'utilisateur";
+        }
+        return $response;
+    }
     /**
      * @param $id
      * @return CommandeEntity|null

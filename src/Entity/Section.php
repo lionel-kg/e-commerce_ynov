@@ -17,6 +17,7 @@ class Section
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"produit_info"})
      */
     private $id;
 

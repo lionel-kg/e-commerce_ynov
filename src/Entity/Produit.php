@@ -24,7 +24,7 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"produit_info","commande_info"})
+     * @Groups({"produit_info","commande_info","info_facture"})
      */
     private $nom;
 
@@ -36,7 +36,7 @@ class Produit
 
     /**
      * @ORM\Column(type="float")
-     * @Groups({"produit_info","commande_info"})
+     * @Groups({"produit_info","commande_info","info_facture"})
      */
     private $prix;
 
@@ -59,17 +59,19 @@ class Produit
 
     /**
      * @ORM\ManyToMany(targetEntity=Section::class, inversedBy="produits")
+     * @Groups({"produit_info"})
      */
     private $Section;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"produit_info"},{"commande_info"})
+     * @Groups({"produit_info","commande_info","info_facture"})
      */
     private $couleur;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"produit_info"})
      */
     private $description;
 

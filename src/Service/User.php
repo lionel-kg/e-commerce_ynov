@@ -141,7 +141,6 @@ class User extends UserServiceTool
         }
         return $response;
     }
-
     /**
      * @param string $jwt
      * @param CommandeService $commandeService

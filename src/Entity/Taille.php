@@ -18,12 +18,13 @@ class Taille
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"produit_info","commande_info","info_facture"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"produit_info"})
+     * @Groups({"produit_info","commande_info","info_facture"})
      */
     private $libelle;
 
@@ -32,9 +33,15 @@ class Taille
      */
     private $stockTailles;
 
+    /**
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="taille")
+     */
+    private $ligneCommandes;
+
     public function __construct()
     {
         $this->stockTailles = new ArrayCollection();
+        $this->ligneCommandes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -78,6 +85,36 @@ class Taille
             // set the owning side to null (unless already changed)
             if ($stockTaille->getTaille() === $this) {
                 $stockTaille->setTaille(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, LigneCommande>
+     */
+    public function getLigneCommandes(): Collection
+    {
+        return $this->ligneCommandes;
+    }
+
+    public function addLigneCommande(LigneCommande $ligneCommande): self
+    {
+        if (!$this->ligneCommandes->contains($ligneCommande)) {
+            $this->ligneCommandes[] = $ligneCommande;
+            $ligneCommande->setTaille($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLigneCommande(LigneCommande $ligneCommande): self
+    {
+        if ($this->ligneCommandes->removeElement($ligneCommande)) {
+            // set the owning side to null (unless already changed)
+            if ($ligneCommande->getTaille() === $this) {
+                $ligneCommande->setTaille(null);
             }
         }
 

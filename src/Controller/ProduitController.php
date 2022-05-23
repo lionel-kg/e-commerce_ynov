@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Controller\CustomAbstractController;
 use App\Service\Categorie as CategorieService;
 use App\Service\Produit as ProduitService;
-use App\Service\Section as SectionService;
+use App\Service\Taille as SectionService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -56,6 +56,9 @@ class ProduitController extends CustomAbstractController
      * @Route("/edit/{id}", methods={"POST"},name="_edit")
      * @param Request $request
      * @param ProduitService $produitService
+     * @param int $id
+     * @param SectionService $sectionService
+     * @param CategorieService $categorieService
      * @return JsonResponse
      * @throws \JsonException
      */
@@ -67,8 +70,9 @@ class ProduitController extends CustomAbstractController
         $waitedParameters = [
             "nom_OPT"=>"string",
             "image_OPT"=>"string",
-            "couleur"=>"string",
-            "prix_OPT"=>"integer",
+            "couleur_OPT"=>"string",
+            "prix_OPT"=>"float",
+            "description_OPT"=>"text"
         ];
         ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
         if($error !== ""){
@@ -167,34 +171,5 @@ class ProduitController extends CustomAbstractController
             return $this->sendError($error,$errorDebug);
         }
         return $this->sendSuccess("Recover product success",$produits,response::HTTP_ACCEPTED);
-    }
-
-    /**
-     * @Route("/edit/{id}", methods={"POST"},name="_edit")
-     * @param Request $request
-     * @param ProduitService $produitService
-     * @return JsonResponse
-     * @throws \JsonException
-     */
-    public function remove(Request $request,ProduitService $produitService,int $id,SectionService $sectionService, CategorieService $categorieService):JsonResponse
-    {
-        $errorDebug = "";
-        $parameters = $this->getParameters($request);
-        $jwt = $this->getJwt($request);
-        $waitedParameters = [
-            "nom_OPT"=>"string",
-            "image_OPT"=>"string",
-            "couleur"=>"string",
-            "prix_OPT"=>"integer",
-        ];
-        ["error"=>$error,"parameters"=>$newParameters] = $this->checkParameters($parameters,$waitedParameters);
-        if($error !== ""){
-            return $this->sendError($error,$error);
-        }
-        ["error"=>$error,"errorDebug"=>$errorDebug,"produit"=>$produit] = $produitService->edit($parameters,$jwt,$id,$sectionService,$categorieService);
-        if($errorDebug !== ""){
-            return $this->sendError($error,$errorDebug);
-        }
-        return $this->sendSuccess("Product edit success",$produit);
     }
 }

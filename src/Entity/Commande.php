@@ -18,25 +18,25 @@ class Commande
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"commande_info"})
+     * @Groups({"commande_info","info_facture"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="date")
-     * @Groups({"commande_info"})
+     * @Groups({"commande_info","info_facture"})
      */
     private $dateEmission;
 
     /**
      * @ORM\Column(type="float")
-     * @Groups({"commande_info"})
+     * @Groups({"commande_info","info_facture"})
      */
     private $prix;
 
     /**
      * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande", orphanRemoval=true , cascade={"remove"})
-     * @Groups({"commande_info"})
+     * @Groups({"commande_info","info_facture"})
      */
     private $ligneCommande;
 
