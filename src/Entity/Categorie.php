@@ -18,12 +18,13 @@ class Categorie
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"categorie_info","produit_info"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"categorie_info"})
+     * @Groups({"categorie_info","produit_info"})
      */
     private $nom;
 

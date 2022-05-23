@@ -40,12 +40,12 @@ class Produit extends ProduitServiceTool
         try{
             if($isAdmin === true){
                 $produit = $this->createEntity($parameter);
-                $categorie = $categorieService->getCategorie($parameter["id"]);
+                $categorie = $categorieService->findById($parameter["categorie"]);
                 if($categorie === null){
                     $response["error"] = "Aucune catégorie trouvé";
                     return $response;
                 }
-                $section = $sectionService->getSection($parameter["sectionId"]);
+                $section = $sectionService->findById($parameter["section"]);
                 if($section === null){
                     $response["error"] = "Aucune section trouvé";
                     return $response;

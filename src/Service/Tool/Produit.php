@@ -31,7 +31,7 @@ class Produit extends CustomAbstractService
 
     public function createEntity(array $produitParameters){
         $field = [
-            "nom","stock","prix","image",
+            "nom","stock","prix","image","couleur",
         ];
         return $this->createSimpleEntity(ProduitEntity::class,$field,$produitParameters);
     }

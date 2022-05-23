@@ -24,13 +24,16 @@ class ProduitController extends CustomAbstractController
      * @return JsonResponse
      * @throws \JsonException
      */
-    public function add(Request $request,ProduitService $produitService,CategorieService $categorieService ): JsonResponse
+    public function add(Request $request,ProduitService $produitService,CategorieService $categorieService, SectionService $sectionService): JsonResponse
     {
         $errorDebug = "";
         $parameters = $this->getParameters($request);
         $jwt = $this->getJwt($request);
         $waitedParameters = [
-            "nom"=> "string","stock"=>"int","prix"=>"float","image"=>"string",
+            "nom"=> "string",
+            "prix"=>"float",
+            "image"=>"string",
+            "couleur"=>"string",
         ];
         ["error" => $error, "parameters" => $newParameters] = $this->checkParameters($parameters, $waitedParameters);
         if ($error !== "") {
@@ -40,7 +43,7 @@ class ProduitController extends CustomAbstractController
             "error" => $error,
             "errorDebug" => $errorDebug,
             "produit" => $produit
-        ] = $produitService->add($newParameters,$jwt,$categorieService);
+        ] = $produitService->add($parameters,$jwt,$categorieService,$sectionService);
         if ($error !== "") {
             return $this->sendError($error,$errorDebug);
         }
