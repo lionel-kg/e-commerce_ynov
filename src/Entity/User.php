@@ -80,6 +80,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->adresse = new ArrayCollection();
     }
 
+    public function setId(int $id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
