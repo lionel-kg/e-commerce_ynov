@@ -199,7 +199,7 @@ abstract class CustomAbstractController extends AbstractController
                     $toExplode = true;
                 }
                 $valueArray = $value;
-                if ($arrayType !== false) {
+                if ($arrayType !== false && $arrayType !== "") {
                     $valueArray = $this->checkArray($arrayType, $value, $toExplode);
                 }
                 if (empty($valueArray)) {
