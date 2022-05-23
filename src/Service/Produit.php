@@ -4,7 +4,7 @@ namespace App\Service;
 
 use App\Entity\Produit as ProduitEntity;
 use App\Service\Categorie as CategorieService;
-use App\Service\Taille as SectionService;
+use App\Service\Section as SectionService;
 use App\Service\Tool\Produit as ProduitServiceTool;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;

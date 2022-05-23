@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Controller\CustomAbstractController;
 use App\Service\Categorie as CategorieService;
 use App\Service\Produit as ProduitService;
-use App\Service\Taille as SectionService;
+use App\Service\Section as SectionService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
